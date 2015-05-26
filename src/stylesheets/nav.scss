@@ -1,0 +1,112 @@
+.nav {
+  background-color: rgba(92, 172, 75, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  height: 4.5rem;
+  padding: 1rem;
+  z-index: 10;
+  @include transition;
+
+  &.expanded {
+    height: 6rem;
+
+    .nav-sign {
+      max-height: 2rem;
+    }
+  }
+
+  .nav-sign {
+    max-height: 0;
+    overflow: hidden;
+    text-align: right;
+    @include transition;
+
+    .nav-item-mini {
+      color: #c6f8b7;
+      font-size: .75rem;
+      vertical-align: middle;
+      padding: 0 1rem;
+      @include transition;
+      text-decoration: none;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .vertical-divider {
+      border-left: 1px solid #666;
+      font-size: .75rem;
+      vertical-align: middle;
+    }
+
+    .nav-list-mini {
+      padding-bottom: .5em;
+      padding-right: .5rem;
+    }
+  }
+
+  .nav-logo {
+    float: left;
+  }
+
+  .nav-list {
+    text-align: right;
+    vertical-align: middle;
+    padding-top: .7rem;
+  }
+
+  .nav-item {
+    padding: .7rem 1.5rem;
+    color: #c6f8b7;
+    display: inline;
+    position: relative;
+    cursor: pointer;
+    font-size: .9rem;
+    text-decoration: none;
+    @include transition;
+
+    &:hover, &.active {
+      color: white;
+    }
+
+    &:hover {
+      .sub-nav-list {
+        max-height: 10rem;
+      }
+    }
+  }
+
+  .sub-nav-list {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    @include transition;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 1rem;
+    background-color: rgba(92, 172, 75, 1);
+    box-shadow: 0 0 4px 0 #333;
+
+    .sub-nav-item {
+      color: #c6f8b7;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: .8rem 0;
+      font-size: .9rem;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .divider {
+      border-top: 1px solid #c6f8b7;
+    }
+  }
+}

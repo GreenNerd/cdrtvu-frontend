@@ -1,0 +1,35 @@
+{
+  "development": {
+    "watch": {
+      "sass": {
+        "sourceDir": "/src/stylesheets",
+        "targetDir": "/src_target/stylesheets",
+        "cacheDir": "/src_target/cache",
+        "options": {}
+      },
+      "coffee": {
+        "sourceDir": "/src/scripts",
+        "targetDir": "/src_target/scripts",
+        "cacheDir": "/src_target/cache",
+        "options": {
+          "bare": true
+        }
+      },
+      "jade": {
+        "sourceDir": "/src/templates",
+        "targetDir": "/src_target/templates",
+        "cacheDir": "/src_target/cache",
+        "options": {
+          "pretty": true
+        }
+      }
+    }
+  },
+  "production": {},
+  "server": {
+    "hostname": "127.0.0.1",
+    "port": 4000,
+    "fileDir": "/server/server.coffee"
+  },
+  "ENV": "development"
+}

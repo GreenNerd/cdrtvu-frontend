@@ -1,0 +1,26 @@
+@mixin transition {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+@mixin centered-block {
+  font-size: 0;
+  text-align: center;
+
+  & > * {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  &::before {
+    height: 100%;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

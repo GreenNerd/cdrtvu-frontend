@@ -1,0 +1,42 @@
+.landing-description {
+  color: white;
+  height: 100%;
+
+  @include centered-block;
+
+  .description-wrapper {
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 5rem;
+    padding: 0 2em;
+
+    h1 {
+      text-align: center;
+      margin: 1em 0;
+      letter-spacing: 2px;
+    }
+
+    .divider {
+      border-top: 1px solid #ccc;
+    }
+
+    .btn-wrapper {
+      margin-top: 1.5em;
+      margin-bottom: 2em;
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: white;
+        padding: .7em 2em;
+        border-radius: 1.2em;
+        background-color: #5cac4b;
+        display: inline-block;
+
+        &:hover {
+          background-color: darken(#5cac4b, 5%);
+        }
+      }
+    }
+  }
+}

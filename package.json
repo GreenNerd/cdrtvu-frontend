@@ -1,0 +1,15 @@
+{
+  "name": "learnNode",
+  "dependencies": {
+    "should": "^5.2.0"
+  },
+  "devDependencies": {
+    "jade": "^1.9.0",
+    "gulp": "^3.8.11",
+    "coffee-script": "^1.9.0",
+    "gulp-coffee": "^2.3.0",
+    "gulp-sass": "*",
+    "gulp-jade": "^1.0.0",
+    "gulp-jade-globbing": "^0.1.6"
+  }
+}
