@@ -25,6 +25,13 @@
   }
 }
 
+@mixin text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+
 .grid {
   font-size: 0;
   display: block;
@@ -46,6 +53,14 @@
   border-top: 1px solid #ccc;
 }
 
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
 .btn-primary {
   text-decoration: none;
   color: white;
@@ -56,5 +71,6 @@
 
   &:hover {
     background-color: darken(#5cac4b, 5%);
+    color: white;
   }
 }

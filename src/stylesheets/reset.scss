@@ -11,6 +11,7 @@ html, body {
 
 html {
   font-size: 16px;
+  font-family: arial, 'Microsoft Yahei', '微软雅黑', '宋体', \5b8b\4f53, Tahoma, Arial, Helvetica, STHeiti;
 }
 
 p {
@@ -18,4 +19,13 @@ p {
   line-height: 2;
   font-size: .8rem;
   margin: 1.5em 0;
+}
+
+a {
+  color: lighten(#5cac4b, 5%);
+  text-decoration: none;
+
+  &:hover {
+    color: #5cac4b;
+  }
 }
