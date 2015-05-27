@@ -50,7 +50,7 @@ gulp.task('watchjade', function(){
   gulp.watch('.' + watch.jade.sourceDir + '/**/*.jade', function(event){
     var changedPath = './' + path.relative(process.cwd(), event.path);
     console.log('File ' + changedPath + ' was ' + event.type + ', running task compile jade');
-    compileJade(changedPath);
+    compileJade('./src/templates/index.jade');
   });
 });
 

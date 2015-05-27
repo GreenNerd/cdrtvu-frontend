@@ -24,3 +24,37 @@
     vertical-align: middle;
   }
 }
+
+.grid {
+  font-size: 0;
+  display: block;
+
+  & > * {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@for $i from 2 through 6 {
+  .grid-1-#{$i} {
+    width: percentage(1 / $i);
+  }
+}
+
+.divider {
+  border-top: 1px solid #ccc;
+}
+
+.btn-primary {
+  text-decoration: none;
+  color: white;
+  padding: .7em 2em;
+  border-radius: 1.2em;
+  background-color: #5cac4b;
+  display: inline-block;
+
+  &:hover {
+    background-color: darken(#5cac4b, 5%);
+  }
+}

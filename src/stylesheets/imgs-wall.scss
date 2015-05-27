@@ -1,8 +1,12 @@
 .imgs-wall {
+  $img-size: 12rem;
+
   font-size: 0;
   text-align: center!important;
   margin-top: 1.8rem;
   margin-bottom: 2rem;
+  max-height: 2 * $img-size;
+  overflow: hidden;
 
   & > * {
     font-size: 1rem;
@@ -10,8 +14,8 @@
 
   .image-item {
     display: inline-block;
-    width: 12rem;
-    height: 12rem;
+    width: $img-size;
+    height: $img-size;
     overflow: hidden;
 
     img {
