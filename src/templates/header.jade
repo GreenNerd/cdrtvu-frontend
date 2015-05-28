@@ -1,5 +1,5 @@
 header
-  #header_nav.nav.expanded
+  #header_nav.nav.expanded.hidden-mobile
     .nav-sign
       .nav-list-mini
         a.nav-item-mini(href='/index') 登录
@@ -21,10 +21,11 @@ header
       a.nav-item(href='/index') 常见问题
       a.nav-item(href='/index') 联系我们
 
-  .landing-description
+  .landing-description.hidden-mobile
     .description-wrapper
       h1 成都广播电视大学直属城中学院
       .divider
       p 成都广播电视大学是中央广播电视大学的省级电大，成都市人民政府主办。直属城中学院是成都电大在成都市中心区域设立的直属办学单位，具体承担学历教育和技能培训的综合办学实体单位。学院位于东城根上街55号，地理位置优越，交通便利。
       .btn-wrapper
         a.btn-primary(href='##') 在线报名
+  .mask.hidden-pc

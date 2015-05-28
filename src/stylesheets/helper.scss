@@ -1,3 +1,5 @@
+$breakpoint-mobile: 720px;
+
 @mixin transition {
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
@@ -68,6 +70,18 @@
 
 .pull-left {
   float: left;
+}
+
+.hidden-mobile {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    display: none!important;
+  }
+}
+
+.hidden-pc {
+  @media only screen and (min-width: $breakpoint-mobile + 1) {
+    display: none!important;
+  }
 }
 
 .btn-primary {
