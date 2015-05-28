@@ -14,8 +14,7 @@ gulp
 ```
 coffee server/server.coffee
 ```
-* 使用
-服务器启动后打开浏览器输入`localhost:4000`即可
+* 服务器启动后打开浏览器输入`localhost:4000`即可
 
 ### 写在最后
 * 编译好的文件放在src_target内
