@@ -122,7 +122,9 @@ header {
       max-width: 700px;
       background-color: rgba(0, 0, 0, 0.5);
       margin-top: 5rem;
-      padding: 0 2em;
+      padding: 0 2rem;
+
+      @include centered-block;
 
       h1 {
         text-align: center;
@@ -134,6 +136,178 @@ header {
         margin-top: 1.5em;
         margin-bottom: 2em;
         text-align: center;
+      }
+
+      .mobile-description {
+        text-align: center;
+
+        h3 {
+          letter-spacing: 1px;
+        }
+
+        h4 {
+          font-family: 'KaiTi', 'STKaiti';
+        }
+      }
+
+      .logo-icon {
+        width: 4rem;
+        height: 4rem;
+        display: inline-block;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+#header_nav_mobile {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  color: white;
+
+  .service-links {
+    padding-top: .8rem;
+    margin-top: .5rem;
+
+    a {
+      color: white;
+      font-size: 1rem;
+      margin-right: 1em;
+    }
+  }
+
+  #menu_icon {
+    padding: .6rem 1rem;
+    margin-top: .5rem;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+
+  .menu-details {
+    display: none;
+    margin: 0 1rem;
+    margin-top: .5rem;
+    border-top: 1px solid #cccccc;
+  }
+
+  .navs {
+    padding: 1rem;
+    padding-bottom: 0;
+
+    .mobile-nav-item {
+      margin-bottom: 1rem;
+
+      &:nth-child(3n) {
+        text-align: right;
+      }
+
+      &:nth-child(3n+1) {
+        text-align: left;
+      }
+
+      &:nth-child(3n+2) {
+        text-align: center;
+      }
+    }
+
+  }
+
+  .sub-navs {
+    border-top: 1px solid #cccccc;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .contacts {
+    padding: 1rem;
+    padding-top: 0;
+
+    .location {
+      margin: .5rem 0;
+
+      div {
+        line-height: 1.5;
+      }
+
+      span {
+        margin-right: 1rem;
+      }
+    }
+
+    .extra-links {
+      margin: 1.5rem 0;
+      margin-bottom: 0;
+    }
+
+    .extra-link-item {
+      display: inline-block;
+      margin-bottom: .5rem;
+      margin-right: 1.5rem;
+
+      i {
+        margin-right: .5rem;
+      }
+
+      .fa-weixin {
+        color: #16C045;
+      }
+
+      .fa-qq {
+        color: #0081FF;
+      }
+
+      .fa-weibo {
+        color: #F73B3B;
+      }
+    }
+  }
+
+  &.expanded {
+    background-color: white;
+    color: #333333;
+
+    a {
+      color: #666666;
+
+      &:visited {
+        color: #666666;
+      }
+
+      &.active, &:active {
+        color: #5cac4b;
+      }
+    }
+
+    .menu-details {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  header {
+    .landing-description {
+      .description-wrapper {
+        max-height: 100%;
+        height: 100%;
+        margin-top: 0;
+        width: 100%;
+        padding: 0 1rem;
+
+        .btn-wrapper {
+          margin-top: 6rem;
+          margin-bottom: 0;
+        }
       }
     }
   }

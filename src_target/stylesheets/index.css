@@ -37,11 +37,11 @@
 .pull-left {
   float: left; }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .hidden-mobile {
     display: none !important; } }
 
-@media only screen and (min-width: 721px) {
+@media only screen and (min-width: 801px) {
   .hidden-pc {
     display: none !important; } }
 
@@ -226,7 +226,19 @@ header .landing-description {
     max-width: 700px;
     background-color: rgba(0, 0, 0, 0.5);
     margin-top: 5rem;
-    padding: 0 2em; }
+    padding: 0 2rem;
+    font-size: 0;
+    text-align: center; }
+    header .landing-description .description-wrapper > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left; }
+    header .landing-description .description-wrapper::before {
+      height: 100%;
+      content: '';
+      display: inline-block;
+      vertical-align: middle; }
     header .landing-description .description-wrapper h1 {
       text-align: center;
       margin: 1em 0;
@@ -235,6 +247,106 @@ header .landing-description {
       margin-top: 1.5em;
       margin-bottom: 2em;
       text-align: center; }
+    header .landing-description .description-wrapper .mobile-description {
+      text-align: center; }
+      header .landing-description .description-wrapper .mobile-description h3 {
+        letter-spacing: 1px; }
+      header .landing-description .description-wrapper .mobile-description h4 {
+        font-family: 'KaiTi', 'STKaiti'; }
+    header .landing-description .description-wrapper .logo-icon {
+      width: 4rem;
+      height: 4rem;
+      display: inline-block; }
+    header .landing-description .description-wrapper img {
+      width: 100%;
+      height: 100%; }
+
+#header_nav_mobile {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  color: white; }
+  #header_nav_mobile .service-links {
+    padding-top: .8rem;
+    margin-top: .5rem; }
+    #header_nav_mobile .service-links a {
+      color: white;
+      font-size: 1rem;
+      margin-right: 1em; }
+  #header_nav_mobile #menu_icon {
+    padding: 0.6rem 1rem;
+    margin-top: .5rem;
+    display: inline-block;
+    font-size: 1.2rem; }
+  #header_nav_mobile .menu-details {
+    display: none;
+    margin: 0 1rem;
+    margin-top: .5rem;
+    border-top: 1px solid #cccccc; }
+  #header_nav_mobile .navs {
+    padding: 1rem;
+    padding-bottom: 0; }
+    #header_nav_mobile .navs .mobile-nav-item {
+      margin-bottom: 1rem; }
+      #header_nav_mobile .navs .mobile-nav-item:nth-child(3n) {
+        text-align: right; }
+      #header_nav_mobile .navs .mobile-nav-item:nth-child(3n+1) {
+        text-align: left; }
+      #header_nav_mobile .navs .mobile-nav-item:nth-child(3n+2) {
+        text-align: center; }
+  #header_nav_mobile .sub-navs {
+    border-top: 1px solid #cccccc;
+    display: none; }
+    #header_nav_mobile .sub-navs.active {
+      display: block; }
+  #header_nav_mobile .contacts {
+    padding: 1rem;
+    padding-top: 0; }
+    #header_nav_mobile .contacts .location {
+      margin: .5rem 0; }
+      #header_nav_mobile .contacts .location div {
+        line-height: 1.5; }
+      #header_nav_mobile .contacts .location span {
+        margin-right: 1rem; }
+    #header_nav_mobile .contacts .extra-links {
+      margin: 1.5rem 0;
+      margin-bottom: 0; }
+    #header_nav_mobile .contacts .extra-link-item {
+      display: inline-block;
+      margin-bottom: .5rem;
+      margin-right: 1.5rem; }
+      #header_nav_mobile .contacts .extra-link-item i {
+        margin-right: .5rem; }
+      #header_nav_mobile .contacts .extra-link-item .fa-weixin {
+        color: #16C045; }
+      #header_nav_mobile .contacts .extra-link-item .fa-qq {
+        color: #0081FF; }
+      #header_nav_mobile .contacts .extra-link-item .fa-weibo {
+        color: #F73B3B; }
+  #header_nav_mobile.expanded {
+    background-color: white;
+    color: #333333; }
+    #header_nav_mobile.expanded a {
+      color: #666666; }
+      #header_nav_mobile.expanded a:visited {
+        color: #666666; }
+      #header_nav_mobile.expanded a.active, #header_nav_mobile.expanded a:active {
+        color: #5cac4b; }
+    #header_nav_mobile.expanded .menu-details {
+      display: block; }
+
+@media only screen and (max-width: 800px) {
+  header .landing-description .description-wrapper {
+    max-height: 100%;
+    height: 100%;
+    margin-top: 0;
+    width: 100%;
+    padding: 0 1rem; }
+    header .landing-description .description-wrapper .btn-wrapper {
+      margin-top: 6rem;
+      margin-bottom: 0; } }
 
 .photos-preview {
   background-color: #f5f5f5; }
