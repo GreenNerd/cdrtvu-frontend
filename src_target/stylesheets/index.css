@@ -506,12 +506,15 @@ header .landing-description {
   background-color: #272727;
   color: white; }
   .footer-panel .panel-content {
-    margin-top: 1.5rem; }
-  .footer-panel .contacts-container p {
-    font-size: .75rem;
+    padding: 1rem 4rem;
     margin: 0; }
-  .footer-panel .contacts-container .extra-links {
-    margin-top: .5rem; }
+  .footer-panel .contacts-container {
+    vertical-align: middle; }
+    .footer-panel .contacts-container p {
+      font-size: .75rem;
+      margin: 0; }
+    .footer-panel .contacts-container .extra-links {
+      margin-top: .5rem; }
   .footer-panel .extra-link-item {
     display: inline-block;
     padding: .5rem;
@@ -551,13 +554,15 @@ header .landing-description {
     .footer-panel .extra-link-item:hover .qr-container {
       display: block; }
   .footer-panel .friend-links {
-    width: 22rem; }
+    vertical-align: middle; }
+    .footer-panel .friend-links > .grid {
+      max-width: 25rem;
+      margin-left: auto; }
   .footer-panel .friend-link-item {
-    width: 10rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem; }
+    padding: .5rem; }
     .footer-panel .friend-link-item img {
-      width: 100%; }
+      width: 100%;
+      display: block; }
   .footer-panel .copyright-container {
     margin: 0 2rem;
     margin-top: 1.5rem;
@@ -581,9 +586,8 @@ header .landing-description {
     padding: 0 1.5rem; }
   .footer-panel .contacts-container {
     text-align: center;
-    float: none; }
+    width: 100%; }
   .footer-panel .friend-links {
-    float: none;
     margin: 2rem auto;
     width: 100%; }
   .footer-panel .friend-link-item {
@@ -591,8 +595,6 @@ header .landing-description {
     width: 50%;
     padding: .5rem;
     padding-bottom: 0; }
-    .footer-panel .friend-link-item img {
-      display: block; }
   .footer-panel .copyright-container {
     border-top: none;
     height: auto;

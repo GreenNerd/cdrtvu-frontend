@@ -3,10 +3,13 @@
   color: white;
 
   .panel-content {
-    margin-top: 1.5rem;
+    padding: 1rem 4rem;
+    margin: 0;
   }
 
   .contacts-container {
+    vertical-align: middle;
+
     p {
       font-size: .75rem;
       margin: 0;
@@ -77,16 +80,20 @@
   }
 
   .friend-links {
-    width: 22rem;
+    vertical-align: middle;
+
+    &>.grid {
+      max-width: 25rem;
+      margin-left: auto
+    }
   }
 
   .friend-link-item {
-    width: 10rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    padding: .5rem;
 
     img {
       width: 100%;
+      display: block;
     }
   }
 
@@ -122,11 +129,10 @@
 
     .contacts-container {
       text-align: center;
-      float: none;
+      width: 100%;
     }
 
     .friend-links {
-      float: none;
       margin: 2rem auto;
       width: 100%;
     }
@@ -136,10 +142,6 @@
       width: 50%;
       padding: .5rem;
       padding-bottom: 0;
-
-      img {
-        display: block;
-      }
     }
 
     .copyright-container {
