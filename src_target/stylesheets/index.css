@@ -267,7 +267,12 @@ header .landing-description {
   z-index: 10;
   width: 100%;
   left: 0;
-  color: white; }
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
   #header_nav_mobile .service-links {
     padding-top: .8rem;
     margin-top: .5rem; }
@@ -281,15 +286,32 @@ header .landing-description {
     display: inline-block;
     font-size: 1.2rem; }
   #header_nav_mobile .menu-details {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     margin: 0 1rem;
     margin-top: .5rem;
-    border-top: 1px solid #cccccc; }
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    #header_nav_mobile .menu-details a {
+      color: #666666; }
+      #header_nav_mobile .menu-details a:visited {
+        color: #666666; }
+      #header_nav_mobile .menu-details a.active, #header_nav_mobile .menu-details a:active {
+        color: #5cac4b; }
   #header_nav_mobile .navs {
+    border-top: 1px solid #cccccc;
     padding: 1rem;
     padding-bottom: 0; }
     #header_nav_mobile .navs .mobile-nav-item {
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
       #header_nav_mobile .navs .mobile-nav-item:nth-child(3n) {
         text-align: right; }
       #header_nav_mobile .navs .mobile-nav-item:nth-child(3n+1) {
@@ -297,7 +319,6 @@ header .landing-description {
       #header_nav_mobile .navs .mobile-nav-item:nth-child(3n+2) {
         text-align: center; }
   #header_nav_mobile .sub-navs {
-    border-top: 1px solid #cccccc;
     display: none; }
     #header_nav_mobile .sub-navs.active {
       display: block; }
@@ -328,14 +349,10 @@ header .landing-description {
   #header_nav_mobile.expanded {
     background-color: white;
     color: #333333; }
-    #header_nav_mobile.expanded a {
-      color: #666666; }
-      #header_nav_mobile.expanded a:visited {
-        color: #666666; }
-      #header_nav_mobile.expanded a.active, #header_nav_mobile.expanded a:active {
-        color: #5cac4b; }
     #header_nav_mobile.expanded .menu-details {
-      display: block; }
+      max-height: 30rem; }
+    #header_nav_mobile.expanded .service-links a {
+      color: #333333; }
 
 @media only screen and (max-width: 800px) {
   header .landing-description .description-wrapper {

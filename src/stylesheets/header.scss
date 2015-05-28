@@ -171,6 +171,7 @@ header {
   width: 100%;
   left: 0;
   color: white;
+  @include transition;
 
   .service-links {
     padding-top: .8rem;
@@ -191,18 +192,34 @@ header {
   }
 
   .menu-details {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     margin: 0 1rem;
     margin-top: .5rem;
-    border-top: 1px solid #cccccc;
+
+    @include transition;
+
+    a {
+      color: #666666;
+
+      &:visited {
+        color: #666666;
+      }
+
+      &.active, &:active {
+        color: #5cac4b;
+      }
+    }
   }
 
   .navs {
+    border-top: 1px solid #cccccc;
     padding: 1rem;
     padding-bottom: 0;
 
     .mobile-nav-item {
       margin-bottom: 1rem;
+      @include transition;
 
       &:nth-child(3n) {
         text-align: right;
@@ -220,7 +237,6 @@ header {
   }
 
   .sub-navs {
-    border-top: 1px solid #cccccc;
     display: none;
 
     &.active {
@@ -276,20 +292,14 @@ header {
     background-color: white;
     color: #333333;
 
-    a {
-      color: #666666;
-
-      &:visited {
-        color: #666666;
-      }
-
-      &.active, &:active {
-        color: #5cac4b;
-      }
+    .menu-details {
+      max-height: 30rem;
     }
 
-    .menu-details {
-      display: block;
+    .service-links {
+      a {
+        color: #333333;
+      }
     }
   }
 }
