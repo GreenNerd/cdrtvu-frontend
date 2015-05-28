@@ -267,7 +267,6 @@ header .landing-description {
   z-index: 10;
   width: 100%;
   left: 0;
-  color: white;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -284,7 +283,8 @@ header .landing-description {
     padding: 0.6rem 1rem;
     margin-top: .5rem;
     display: inline-block;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    color: white; }
   #header_nav_mobile .menu-details {
     max-height: 0;
     overflow: hidden;
@@ -349,6 +349,8 @@ header .landing-description {
   #header_nav_mobile.expanded {
     background-color: white;
     color: #333333; }
+    #header_nav_mobile.expanded #menu_icon {
+      color: #333333; }
     #header_nav_mobile.expanded .menu-details {
       max-height: 30rem; }
     #header_nav_mobile.expanded .service-links a {
