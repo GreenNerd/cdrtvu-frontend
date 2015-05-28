@@ -294,3 +294,6 @@ header {
     margin: 1.5em 0; }
   .categories-panel .category-item .category-footer {
     font-size: .8rem; }
+
+.footer-panel {
+  background-color: #272727; }
