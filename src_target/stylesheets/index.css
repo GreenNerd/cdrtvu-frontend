@@ -470,6 +470,38 @@ header .landing-description {
   .categories-panel .category-item .category-footer {
     font-size: .8rem; }
 
+.categories-panel .switch-control {
+  position: absolute;
+  z-index: 10;
+  top: .8rem;
+  right: 1rem;
+  background-color: white; }
+  .categories-panel .switch-control i {
+    padding: 0.3rem 0.5rem;
+    margin-left: .2rem;
+    cursor: pointer; }
+  .categories-panel .switch-control .disabled {
+    cursor: default;
+    color: #999999; }
+
+@media only screen and (max-width: 800px) {
+  .categories-panel .panel-content {
+    padding: 0;
+    overflow: hidden;
+    position: relative; }
+    .categories-panel .panel-content .grid {
+      width: 300%;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+  .categories-panel .category-item {
+    padding: 0 1rem;
+    margin: 1rem 0; }
+    .categories-panel .category-item h4 {
+      width: 80%; } }
+
 .footer-panel {
   background-color: #272727;
   color: white; }
