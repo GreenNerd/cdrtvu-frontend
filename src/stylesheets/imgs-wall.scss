@@ -33,3 +33,23 @@
     }
   }
 }
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .photos-preview {
+    .panel-wrapper {
+      padding-bottom: 0;
+    }
+  }
+
+  .imgs-wall {
+    $img-size-mobile: 10rem;
+
+    max-height: 3 * $img-size-mobile;
+    margin-bottom: 0;
+
+    .image-item {
+      width: 50%;
+      height: $img-size-mobile;
+    }
+  }
+}

@@ -395,6 +395,16 @@ header .landing-description {
       .imgs-wall .image-item img:hover {
         transform: scale(1.1); }
 
+@media only screen and (max-width: 800px) {
+  .photos-preview .panel-wrapper {
+    padding-bottom: 0; }
+  .imgs-wall {
+    max-height: 30rem;
+    margin-bottom: 0; }
+    .imgs-wall .image-item {
+      width: 50%;
+      height: 10rem; } }
+
 .introduction-panel {
   background-image: url(2.png);
   background-position: center;
