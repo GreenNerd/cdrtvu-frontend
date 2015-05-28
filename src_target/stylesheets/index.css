@@ -25,6 +25,12 @@
 .divider {
   border-top: 1px solid #ccc; }
 
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 100%; }
+
 .pull-right {
   float: right; }
 
@@ -66,6 +72,9 @@ a {
   text-decoration: none; }
   a:hover {
     color: #5cac4b; }
+
+img {
+  display: inherit; }
 
 header {
   height: 80%;
@@ -296,4 +305,74 @@ header {
     font-size: .8rem; }
 
 .footer-panel {
-  background-color: #272727; }
+  background-color: #272727;
+  color: white; }
+  .footer-panel .panel-content {
+    margin-top: 1.5rem; }
+  .footer-panel .contacts-container p {
+    font-size: .75rem;
+    margin: 0; }
+  .footer-panel .contacts-container .extra-links {
+    margin-top: .5rem; }
+  .footer-panel .extra-link-item {
+    display: inline-block;
+    padding: .5rem;
+    font-size: 1.2rem;
+    margin-right: .5rem;
+    border-radius: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    position: relative; }
+    .footer-panel .extra-link-item.extra-qq {
+      background-color: #0081FF; }
+    .footer-panel .extra-link-item.extra-weixin {
+      background-color: #16C045; }
+    .footer-panel .extra-link-item.extra-weibo {
+      background-color: #F73B3B; }
+    .footer-panel .extra-link-item .qr-container {
+      position: absolute;
+      left: -1.4rem;
+      bottom: 120%;
+      display: none;
+      padding: .5rem;
+      background-color: white; }
+      .footer-panel .extra-link-item .qr-container img {
+        width: 4rem;
+        height: 4rem; }
+      .footer-panel .extra-link-item .qr-container .caret-down {
+        width: 0;
+        height: 0;
+        border-top: .5rem solid white;
+        border-left: .5rem solid transparent;
+        border-right: .5rem solid transparent;
+        border-bottom: none;
+        position: absolute;
+        top: 100%;
+        left: 2rem; }
+    .footer-panel .extra-link-item:hover .qr-container {
+      display: block; }
+  .footer-panel .friend-links {
+    width: 22rem; }
+  .footer-panel .friend-link-item {
+    width: 10rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem; }
+    .footer-panel .friend-link-item img {
+      width: 100%; }
+  .footer-panel .copyright-container {
+    margin: 0 2rem;
+    margin-top: 1.5rem;
+    border-top-color: #414141;
+    text-align: center;
+    height: .4rem; }
+    .footer-panel .copyright-container .copyright-text {
+      white-space: nowrap;
+      display: inline-block;
+      position: relative;
+      top: -.65rem;
+      font-size: .75rem;
+      background-color: #272727;
+      color: #5a5a5a;
+      padding: 0 1rem; }
+      .footer-panel .copyright-container .copyright-text span {
+        margin: 0 3px; }

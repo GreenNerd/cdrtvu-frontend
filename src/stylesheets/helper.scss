@@ -53,6 +53,15 @@
   border-top: 1px solid #ccc;
 }
 
+.clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 100%;
+  }
+}
+
 .pull-right {
   float: right;
 }
