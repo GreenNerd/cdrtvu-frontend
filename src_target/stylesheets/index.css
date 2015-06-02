@@ -378,7 +378,8 @@ header .landing-description, .header .landing-description {
         color: #F73B3B; }
   #header_nav_mobile.expanded {
     background-color: white;
-    color: #333333; }
+    color: #333333;
+    box-shadow: 0 0 4px 0 #666666; }
     #header_nav_mobile.expanded #menu_icon {
       color: #333333; }
     #header_nav_mobile.expanded .menu-details {
