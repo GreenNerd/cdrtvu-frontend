@@ -590,6 +590,8 @@ header .landing-description {
   .footer-panel .friend-links {
     margin: 2rem auto;
     width: 100%; }
+    .footer-panel .friend-links > .grid {
+      margin: auto; }
   .footer-panel .friend-link-item {
     margin: 0;
     width: 50%;

@@ -135,6 +135,10 @@
     .friend-links {
       margin: 2rem auto;
       width: 100%;
+
+      &>.grid {
+        margin: auto;
+      }
     }
 
     .friend-link-item {
