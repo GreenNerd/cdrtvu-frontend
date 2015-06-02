@@ -45,9 +45,17 @@ $breakpoint-mobile: 800px;
   }
 }
 
-@for $i from 2 through 6 {
+@for $i from 1 through 6 {
   .grid-1-#{$i} {
     width: percentage(1 / $i);
+  }
+}
+
+@for $j from 1 through 6 {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    .grid-s-1-#{$j} {
+      width: percentage(1 / $j);
+    }
   }
 }
 
