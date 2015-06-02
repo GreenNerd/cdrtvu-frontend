@@ -67,10 +67,11 @@
 
     p {
       margin: 0;
+      @include line-clamp(2);
     }
 
     .faq-expand-togger {
-      margin-top: .2rem;
+      margin-top: .5rem;
       font-size: .8rem;
       color: #5cac4b;
       cursor: pointer;

@@ -697,9 +697,14 @@ header .landing-description, .header .landing-description {
       margin: .5rem 0;
       color: #5cac4b; }
     #questions_container .faq-section p {
-      margin: 0; }
+      margin: 0;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2; }
     #questions_container .faq-section .faq-expand-togger {
-      margin-top: .2rem;
+      margin-top: .5rem;
       font-size: .8rem;
       color: #5cac4b;
       cursor: pointer; }
