@@ -648,6 +648,43 @@ header .landing-description, .header .landing-description {
   .faq-header #header_nav_mobile.expanded .header-title {
     color: #333333; }
 
+.faq-category-item {
+  font-size: 0;
+  text-align: center;
+  height: 8rem;
+  margin: .5rem;
+  background-size: cover;
+  background-position: center;
+  color: white; }
+  .faq-category-item > * {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left; }
+  .faq-category-item::before {
+    height: 100%;
+    content: '';
+    display: inline-block;
+    vertical-align: middle; }
+  .faq-category-item h3 {
+    margin: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block; }
+  .faq-category-item p {
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block; }
+  .faq-category-item .category-info {
+    padding: 0 1rem;
+    width: 100%; }
+
 @media only screen and (max-width: 800px) {
   .faq-header {
     padding-bottom: 3.6rem; } }

@@ -22,6 +22,33 @@
   }
 }
 
+.faq-category-item {
+  @include centered-block;
+  height: 8rem;
+  margin: .5rem;
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  h3 {
+    margin: 0;
+    text-align: center;
+    @include text-ellipsis;
+  }
+
+  p {
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
+    @include text-ellipsis;
+  }
+
+  .category-info {
+    padding: 0 1rem;
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: $breakpoint-mobile) {
   .faq-header {
     padding-bottom: 3.6rem;
