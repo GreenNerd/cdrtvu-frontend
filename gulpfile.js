@@ -52,6 +52,7 @@ gulp.task('watchjade', function(){
     console.log('File ' + changedPath + ' was ' + event.type + ', running task compile jade');
     compileJade('./src/templates/index.jade');
     compileJade('./src/templates/FAQ.jade');
+    compileJade('./src/templates/category.jade');
   });
 });
 
