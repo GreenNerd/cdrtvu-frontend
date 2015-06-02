@@ -68,5 +68,4 @@ $ ->
           setCategoryIndex(getCurrentIndex() + 1)
 
 
-
   IndexCtrl.init()

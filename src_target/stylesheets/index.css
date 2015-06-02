@@ -703,11 +703,13 @@ header .landing-description, .header .landing-description {
       text-overflow: ellipsis;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2; }
-    #questions_container .faq-section .faq-expand-togger {
+    #questions_container .faq-section .faq-expand-toggler {
       margin-top: .5rem;
       font-size: .8rem;
       color: #5cac4b;
       cursor: pointer; }
+    #questions_container .faq-section.expanded p {
+      display: block; }
 
 @media only screen and (max-width: 800px) {
   .faq-header {
