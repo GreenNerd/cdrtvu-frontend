@@ -1,25 +1,5 @@
 header
-  #header_nav.nav.expanded.hidden-mobile
-    .nav-sign
-      .nav-list-mini
-        a.nav-item-mini(href='/index') 登录
-        span.vertical-divider
-        a.nav-item-mini(href='/index') 支持
-        span.vertical-divider
-        a.nav-item-mini(href='/index') 关于我们
-    img.nav-logo(src='logo-title.png', alt='LOGO')
-    .nav-list
-      a.nav-item(href='/index') 首页
-      span.nav-item
-        span 新闻聚焦
-        .sub-nav-list
-          a.sub-nav-item(href='/index') 时事新闻
-          .divider
-          a.sub-nav-item(href='/index') 学校近况
-          .divider
-          a.sub-nav-item(href='/index') 最新活动
-      a.nav-item(href='/index') 常见问题
-      a.nav-item(href='/index') 联系我们
+  include ./head-nav.jade
 
   #header_nav_mobile.hidden-pc
     .pull-right.service-links
