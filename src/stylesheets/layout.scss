@@ -39,3 +39,34 @@ header {
     width: 100%;
   }
 }
+
+.faq-header, .category-header {
+  padding-bottom: 6rem;
+  background-color: rgba(92, 172, 75, 0.9);
+
+  #header_nav_mobile {
+    .header-title {
+      position: absolute;
+      z-index: -1;
+      top: .5rem;
+      line-height: 2.6rem;
+      text-align: center;
+      font-size: 1.2rem;
+      width: 100%;
+      color: white;
+    }
+
+    &.expanded {
+      .header-title {
+        color: #333333;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .faq-header, .category-header {
+    padding-bottom: 3.6rem;
+  }
+}
