@@ -24,8 +24,8 @@ route = (req, res)->
         res.write data, 'binary'
         res.end()
     when 'text/html'
-      pathname = 'index.html' if pathname is '/'
-      fs.readFile "#{process.cwd()}/src_target/templates/#{pathname}", (err, data)->
+      pathname = 'index' if pathname is '/'
+      fs.readFile "#{process.cwd()}/src_target/templates/#{pathname}.html", (err, data)->
         unless err
           res.write data, 'utf-8'
           res.end()
