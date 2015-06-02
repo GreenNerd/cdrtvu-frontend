@@ -43,6 +43,7 @@ gulp.task('watchsass', function(){
     var changedPath = './' + path.relative(process.cwd(), event.path);
     console.log('File ' + changedPath + ' was ' + event.type + ', running tast compile sass');
     compileSass('./src/stylesheets/index.scss');
+    compileSass('./src/stylesheets/FAQ.scss');
   });
 });
 
@@ -51,6 +52,7 @@ gulp.task('watchjade', function(){
     var changedPath = './' + path.relative(process.cwd(), event.path);
     console.log('File ' + changedPath + ' was ' + event.type + ', running task compile jade');
     compileJade('./src/templates/index.jade');
+    compileJade('./src/templates/FAQ.jade');
   });
 });
 
