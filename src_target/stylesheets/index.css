@@ -648,10 +648,14 @@ header .landing-description, .header .landing-description {
   .faq-header #header_nav_mobile.expanded .header-title {
     color: #333333; }
 
+.faq-categories, #questions_container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 .faq-category-item {
   font-size: 0;
   text-align: center;
-  height: 8rem;
+  height: 7rem;
   margin: .5rem;
   background-size: cover;
   background-position: center;
@@ -684,6 +688,21 @@ header .landing-description, .header .landing-description {
   .faq-category-item .category-info {
     padding: 0 1rem;
     width: 100%; }
+
+#questions_container {
+  padding: 0 1rem; }
+  #questions_container .faq-section {
+    margin: 1.5rem 0; }
+    #questions_container .faq-section h4 {
+      margin: .5rem 0;
+      color: #5cac4b; }
+    #questions_container .faq-section p {
+      margin: 0; }
+    #questions_container .faq-section .faq-expand-togger {
+      margin-top: .2rem;
+      font-size: .8rem;
+      color: #5cac4b;
+      cursor: pointer; }
 
 @media only screen and (max-width: 800px) {
   .faq-header {
