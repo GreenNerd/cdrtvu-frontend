@@ -139,10 +139,10 @@ header {
 .map-panel img {
   width: 100%; }
 
-.faq-header, .category-header {
+.faq-header, .category-header, .page-header {
   padding-bottom: 6rem;
   background-color: rgba(92, 172, 75, 0.9); }
-  .faq-header #header_nav_mobile .header-title, .category-header #header_nav_mobile .header-title {
+  .faq-header #header_nav_mobile .header-title, .category-header #header_nav_mobile .header-title, .page-header #header_nav_mobile .header-title {
     position: absolute;
     z-index: -1;
     top: .5rem;
@@ -151,11 +151,11 @@ header {
     font-size: 1.2rem;
     width: 100%;
     color: white; }
-  .faq-header #header_nav_mobile.expanded .header-title, .category-header #header_nav_mobile.expanded .header-title {
+  .faq-header #header_nav_mobile.expanded .header-title, .category-header #header_nav_mobile.expanded .header-title, .page-header #header_nav_mobile.expanded .header-title {
     color: #333333; }
 
 @media only screen and (max-width: 800px) {
-  .faq-header, .category-header {
+  .faq-header, .category-header, .page-header {
     padding-bottom: 3.6rem; } }
 
 header .nav, .header .nav {
@@ -762,6 +762,35 @@ header .landing-description, .header .landing-description {
       font-weight: bold;
       color: #5cac4b; }
 
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem; }
+  .page-container .page-main-content {
+    width: 67%; }
+    .page-container .page-main-content img {
+      max-width: 100%; }
+    .page-container .page-main-content p {
+      text-indent: 2em; }
+  .page-container .related-pages {
+    width: 33%;
+    padding: 0 1.5rem; }
+    .page-container .related-pages h3 {
+      border-bottom: 1px solid #999999;
+      padding-bottom: .5rem; }
+    .page-container .related-pages a {
+      list-style-type: none;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      display: block; }
+      .page-container .related-pages a img {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: .5rem; }
+      .page-container .related-pages a .relate-page-title {
+        font-size: .9rem;
+        line-height: 1.5; }
+
 @media only screen and (max-width: 800px) {
   .pages-container .page-item .page-title {
     margin-bottom: .5rem;
@@ -772,4 +801,6 @@ header .landing-description, .header .landing-description {
     white-space: nowrap;
     display: block; }
   .pages-container .page-item-content .page-created_at {
-    float: none; } }
+    float: none; }
+  .page-container .page-main-content {
+    width: 100%; } }
