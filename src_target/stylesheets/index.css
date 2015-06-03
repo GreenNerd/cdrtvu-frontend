@@ -715,3 +715,61 @@ header .landing-description, .header .landing-description {
       cursor: pointer; }
     #questions_container .faq-section.expanded p {
       display: block; }
+
+.pages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: .5rem; }
+  .pages-container .page-item-first {
+    margin-bottom: 1.5rem; }
+    .pages-container .page-item-first .page-item-cover {
+      position: relative; }
+      .pages-container .page-item-first .page-item-cover img {
+        width: 100%; }
+      .pages-container .page-item-first .page-item-cover .page-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        padding: .5rem; }
+  .pages-container .page-item-content {
+    overflow: hidden; }
+    .pages-container .page-item-content p {
+      margin: 0;
+      margin-bottom: .5rem;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3; }
+    .pages-container .page-item-content .page-created_at, .pages-container .page-item-content a {
+      font-size: .8rem; }
+    .pages-container .page-item-content .page-created_at {
+      float: right; }
+  .pages-container .page-item {
+    margin: 1.5rem 0; }
+    .pages-container .page-item .page-item-cover {
+      float: left;
+      margin-right: 1rem;
+      max-width: 20%; }
+      .pages-container .page-item .page-item-cover img {
+        width: 100%; }
+    .pages-container .page-item .page-title {
+      margin-bottom: 1rem;
+      margin-top: .3rem;
+      font-weight: bold;
+      color: #5cac4b; }
+
+@media only screen and (max-width: 800px) {
+  .pages-container .page-item .page-title {
+    margin-bottom: .5rem;
+    margin-top: 0; }
+  .pages-container .page-item-content p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block; }
+  .pages-container .page-item-content .page-created_at {
+    float: none; } }
