@@ -114,7 +114,8 @@ a {
 
 em {
   font-weight: bold;
-  color: #6ab75a; }
+  color: #6ab75a;
+  font-style: normal; }
 
 img {
   display: inherit; }
@@ -670,10 +671,6 @@ header.index-header .nav {
       position: static;
       line-height: 1.5; } }
 
-.faq-categories, #questions_container {
-  max-width: 1200px;
-  margin: 0 auto; }
-
 .faq-category-item {
   font-size: 0;
   text-align: center;
@@ -717,7 +714,7 @@ header.index-header .nav {
     margin: 1.5rem 0; }
     #questions_container .faq-section h4 {
       margin: .5rem 0;
-      color: #5cac4b; }
+      color: #6ab75a; }
     #questions_container .faq-section p {
       margin: 0;
       display: -webkit-box;
@@ -728,31 +725,33 @@ header.index-header .nav {
     #questions_container .faq-section .faq-expand-toggler {
       margin-top: .5rem;
       font-size: .8rem;
-      color: #5cac4b;
+      color: #6ab75a;
       cursor: pointer; }
     #questions_container .faq-section.expanded p {
       display: block; }
 
 .pages-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: .5rem; }
+  padding: 1rem; }
   .pages-container .page-item-first {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1rem;
+    display: block; }
     .pages-container .page-item-first .page-item-cover {
-      position: relative; }
-      .pages-container .page-item-first .page-item-cover img {
-        width: 100%; }
+      position: relative;
+      height: 10rem;
+      margin-bottom: .5rem;
+      background-size: cover;
+      background-position: center center; }
       .pages-container .page-item-first .page-item-cover .page-title {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.5);
         color: white;
         padding: .5rem; }
   .pages-container .page-item-content {
-    overflow: hidden; }
+    overflow: hidden;
+    color: #333333; }
     .pages-container .page-item-content p {
       margin: 0;
       margin-bottom: .5rem;
@@ -761,34 +760,41 @@ header.index-header .nav {
       text-overflow: ellipsis;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3; }
-    .pages-container .page-item-content .page-created_at, .pages-container .page-item-content a {
-      font-size: .8rem; }
     .pages-container .page-item-content .page-created_at {
+      font-size: .8rem;
       float: right; }
+    .pages-container .page-item-content em {
+      font-size: .8rem; }
   .pages-container .page-item {
-    margin: 1.5rem 0; }
+    padding-top: .8rem;
+    margin-bottom: 0.8rem;
+    display: block; }
     .pages-container .page-item .page-item-cover {
       float: left;
-      margin-right: 1rem;
+      margin-right: .8rem;
       max-width: 20%; }
       .pages-container .page-item .page-item-cover img {
         width: 100%; }
     .pages-container .page-item .page-title {
-      margin-bottom: 1rem;
+      margin-bottom: .8rem;
       margin-top: .3rem;
       font-weight: bold;
       color: #5cac4b; }
 
 .page-container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 1rem; }
+  .page-container h3 {
+    color: #6ab75a;
+    margin: .5rem 0;
+    line-height: 1.5; }
+  .page-container .page-created_at {
+    font-size: .8rem; }
   .page-container .page-main-content {
     width: 67%; }
-    .page-container .page-main-content img {
-      max-width: 100%; }
-    .page-container .page-main-content p {
-      text-indent: 2em; }
+  .page-container .page-body img {
+    max-width: 100%; }
+  .page-container .page-body p {
+    text-indent: 2em; }
   .page-container .related-pages {
     width: 33%;
     padding: 0 1.5rem; }
@@ -809,9 +815,11 @@ header.index-header .nav {
         line-height: 1.5; }
 
 @media only screen and (max-width: 800px) {
-  .pages-container .page-item .page-title {
-    margin-bottom: .5rem;
-    margin-top: 0; }
+  .pages-container .page-item {
+    border-top: 1px solid #dddddd; }
+    .pages-container .page-item .page-title {
+      margin-bottom: .5rem;
+      margin-top: 0; }
   .pages-container .page-item-content p {
     text-overflow: ellipsis;
     overflow: hidden;
