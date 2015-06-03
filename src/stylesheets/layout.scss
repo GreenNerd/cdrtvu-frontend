@@ -23,21 +23,18 @@ header {
   text-align: center;
 
   .panel-wrapper {
-    max-width: 1200px;
     padding: 1em 0;
-    margin: 0 auto;
 
     h3 {
-      color: rgba(92, 172, 75, 1);
+      color: $nav-bgc;
     }
   }
 
   .panel-content {
     text-align: left;
-    padding: 0 2em;
+    padding: 0 1.5rem;
 
     em {
-      color: rgba(92, 172, 75, 1);
       font-style: normal;
     }
   }

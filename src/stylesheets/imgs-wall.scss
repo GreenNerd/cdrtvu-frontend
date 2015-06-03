@@ -5,16 +5,11 @@
 .imgs-wall {
   $img-size: 12rem;
 
-  font-size: 0;
   text-align: center!important;
   margin-top: 1.8rem;
   margin-bottom: 2rem;
   max-height: 2 * $img-size;
   overflow: hidden;
-
-  & > * {
-    font-size: 1rem;
-  }
 
   .image-item {
     display: inline-block;
@@ -42,14 +37,20 @@
   }
 
   .imgs-wall {
-    $img-size-mobile: 10rem;
+    $img-size-mobile: 12rem;
 
     max-height: 3 * $img-size-mobile;
     margin-bottom: 0;
+    padding: 0!important;
 
     .image-item {
-      width: 50%;
+      width: $img-size-mobile;
+      max-width: 50%;
       height: $img-size-mobile;
+
+      img:hover {
+        transform: none;
+      }
     }
   }
 }

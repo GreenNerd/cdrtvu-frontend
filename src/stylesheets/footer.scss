@@ -3,7 +3,7 @@
   color: white;
 
   .panel-content {
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     margin: 0;
   }
 
@@ -72,7 +72,7 @@
       }
     }
 
-    &:hover {
+    &:hover, &:active {
       .qr-container {
         display: block;
       }
