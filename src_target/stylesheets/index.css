@@ -829,3 +829,73 @@ header.index-header .nav {
     float: none; }
   .page-container .page-main-content {
     width: 100%; } }
+
+.namecards {
+  text-align: center !important;
+  overflow: hidden;
+  max-height: 37.5rem;
+  padding: 0 !important; }
+
+.card-item {
+  position: relative;
+  overflow: hidden;
+  height: 12.5rem;
+  width: 12.5rem; }
+  .card-item .name {
+    margin-top: 0;
+    text-align: center; }
+  .card-item .position {
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: .8rem; }
+  .card-item .mobilephone {
+    text-align: center; }
+  .card-item .card-content {
+    position: absolute;
+    background-color: rgba(92, 172, 75, 0.5);
+    color: white;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .card-item .card-content > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left; }
+    .card-item .card-content::before {
+      height: 100%;
+      content: '';
+      display: inline-block;
+      vertical-align: middle; }
+  .card-item:nth-child(4n) .card-content {
+    left: 100%; }
+  .card-item:nth-child(4n+2) .card-content {
+    left: -100%; }
+  .card-item:nth-child(4n+1) .card-content {
+    top: 100%; }
+  .card-item:nth-child(4n+3) .card-content {
+    top: -100%; }
+  .card-item:hover .card-content {
+    top: 0 !important;
+    left: 0 !important; }
+  .card-item img {
+    display: block; }
+  .card-item .card-mobile-content {
+    position: absolute;
+    bottom: .5rem;
+    left: 0;
+    color: white; }
+    .card-item .card-mobile-content span {
+      margin-left: .5rem; }
+
+@media only screen and (max-width: 800px) {
+  .card-item {
+    width: 50%;
+    max-width: 12.5rem; } }

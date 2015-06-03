@@ -1,0 +1,85 @@
+$namecard-size: 12.5rem;
+.namecards {
+  text-align: center!important;
+  overflow: hidden;
+  max-height: 3 * $namecard-size;
+  padding: 0!important;
+}
+
+.card-item {
+  position: relative;
+  overflow: hidden;
+  height: $namecard-size;
+  width: $namecard-size;
+
+  .name {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .position {
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: .8rem;
+  }
+
+  .mobilephone {
+    text-align: center;
+  }
+
+  .card-content {
+    position: absolute;
+    background-color: rgba(92, 172, 75, .5);
+    color: white;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    @include centered-block;
+    @include transition;
+  }
+
+  &:nth-child(4n) .card-content {
+    left: 100%;
+  }
+
+  &:nth-child(4n+2) .card-content {
+    left: -100%;
+  }
+
+  &:nth-child(4n+1) .card-content {
+    top: 100%;
+  }
+
+  &:nth-child(4n+3) .card-content {
+    top: -100%;
+  }
+
+  &:hover {
+    .card-content {
+      top: 0!important;
+      left: 0!important;
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+  .card-mobile-content {
+    position: absolute;
+    bottom: .5rem;
+    left: 0;
+    color: white;
+
+    span {
+      margin-left: .5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .card-item {
+    width: 50%;
+    max-width: $namecard-size;
+  }
+}

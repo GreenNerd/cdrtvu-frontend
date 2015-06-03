@@ -54,6 +54,7 @@ gulp.task('watchjade', function(){
     compileJade('./src/templates/FAQ.jade');
     compileJade('./src/templates/category.jade');
     compileJade('./src/templates/page.jade');
+    compileJade('./src/templates/aboutme.jade');
   });
 });
 
