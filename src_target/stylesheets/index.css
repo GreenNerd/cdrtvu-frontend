@@ -129,7 +129,7 @@ header {
   header.index-header {
     padding-bottom: 0; }
     header.index-header + div {
-      margin-top: 0; }
+      margin-top: 0 !important; }
   header + div {
     margin-top: 6rem !important; }
 
