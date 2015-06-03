@@ -1,6 +1,10 @@
 extends ./share/layout.jade
 block body
-  include ./index/header.jade
+  header.index-header
+    include ./share/head-nav-pc.jade
+    - var title = '首页'
+    include ./share/head-nav-mobile.jade
+  include ./index/landing.jade
   include ./index/summary.jade
   include ./index/photos.jade
   include ./index/introduction.jade

@@ -1,0 +1,275 @@
+header {
+  .service-links {
+    display: none;
+  }
+
+  .header-title {
+    display: block;
+    position: absolute;
+    top: .5rem;
+    line-height: 2.6rem;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    color: white;
+  }
+
+  &.index-header {
+    .service-links {
+      display: block;
+    }
+
+    .header-title {
+      display: none;
+    }
+
+    .nav {
+      background-color: transparent;
+    }
+  }
+}
+
+.nav {
+  color: white;
+  height: 4.5rem;
+  padding: 1rem;
+  @include transition;
+
+  &.expanded {
+    height: 6rem;
+
+    .nav-sign {
+      min-height: 2rem;
+    }
+  }
+
+  .nav-sign {
+    max-height: 0;
+    overflow: hidden;
+    text-align: right;
+    @include transition;
+
+    .nav-item-mini {
+      color: #c6f8b7;
+      font-size: .75rem;
+      vertical-align: middle;
+      padding: 0 1rem;
+      text-decoration: none;
+      @include transition;
+
+      &:hover, &:active {
+        color: white;
+      }
+    }
+
+    .vertical-divider {
+      border-left: 1px solid #666;
+      font-size: .75rem;
+      vertical-align: middle;
+    }
+
+    .nav-list-mini {
+      padding-bottom: .5em;
+      margin-right: -1rem;
+    }
+  }
+
+  .nav-list {
+    text-align: right;
+    vertical-align: middle;
+    padding-top: .7rem;
+    margin-right: -1.5rem;
+  }
+
+  .nav-item {
+    padding: .7rem 1.5rem;
+    color: #c6f8b7;
+    display: inline;
+    position: relative;
+    cursor: pointer;
+    font-size: .9rem;
+    text-decoration: none;
+    @include transition;
+
+    &:hover, &.active, &:active {
+      color: white;
+
+      .sub-nav-list {
+        max-height: 10rem;
+      }
+    }
+  }
+
+  .sub-nav-list {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    @include transition;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 1rem;
+    background-color: $link-color;
+    box-shadow: 0 0 4px 0 #333;
+
+    .sub-nav-item {
+      color: #c6f8b7;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: .8rem 0;
+      font-size: .9rem;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .divider {
+      border-top: 1px solid #c6f8b7;
+    }
+  }
+}
+
+#header_nav_mobile {
+  @include transition;
+
+  .service-links {
+    padding-top: .8rem;
+    margin-top: .5rem;
+
+    a {
+      color: white;
+      font-size: 1rem;
+      margin-right: 1em;
+    }
+  }
+
+  #menu_icon {
+    padding: .6rem 1rem;
+    margin-top: .5rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  .menu-details {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0 1rem;
+    margin-top: .5rem;
+
+    @include transition;
+
+    a {
+      color: #666666;
+
+      &:visited {
+        color: #666666;
+      }
+
+      &.active, &:active {
+        color: #5cac4b;
+      }
+    }
+  }
+
+  .navs {
+    border-top: 1px solid #cccccc;
+    padding: 1rem;
+    padding-bottom: 0;
+
+    .mobile-nav-item {
+      margin-bottom: 1rem;
+      @include transition;
+
+      &:nth-child(3n) {
+        text-align: right;
+      }
+
+      &:nth-child(3n+1) {
+        text-align: left;
+      }
+
+      &:nth-child(3n+2) {
+        text-align: center;
+      }
+    }
+  }
+
+  .sub-navs {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .contacts {
+    padding: 1rem;
+    padding-top: 0;
+
+    .location {
+      margin: .5rem 0;
+
+      div {
+        line-height: 1.5;
+      }
+
+      span {
+        margin-right: 1rem;
+      }
+    }
+
+    .extra-links {
+      margin: 1.5rem 0;
+      margin-bottom: 0;
+    }
+
+    .extra-link-item {
+      display: inline-block;
+      margin-bottom: .5rem;
+      margin-right: 1.5rem;
+
+      i {
+        margin-right: .5rem;
+      }
+
+      .fa-weixin {
+        color: #16C045;
+      }
+
+      .fa-qq {
+        color: #0081FF;
+      }
+
+      .fa-weibo {
+        color: #F73B3B;
+      }
+    }
+  }
+
+  &.expanded {
+    background-color: white;
+    color: #333333;
+    box-shadow: 0 0 4px 0 #666666;
+
+    #menu_icon {
+      color: #333333;
+    }
+
+    .menu-details {
+      max-height: 30rem;
+    }
+
+    .service-links {
+      a {
+        color: #333333;
+      }
+    }
+
+    .header-title {
+      color: #333333;
+    }
+  }
+}

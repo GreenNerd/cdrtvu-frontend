@@ -1,4 +1,9 @@
 $breakpoint-mobile: 800px;
+$link-color: lighten(#5cac4b, 5%);
+$link-hover-color: #5cac4b;
+$mask-color: rgba(0, 0, 0, 0.5);
+$nav-bgc: rgba(92, 172, 75, 0.9);
+$max-width: 1200px;
 
 @mixin transition {
   -webkit-transition: all .3s ease-in-out;
@@ -40,6 +45,11 @@ $breakpoint-mobile: 800px;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $n;
+}
+
+@mixin center-bg {
+  background-size: cover;
+  background-position: center center;
 }
 
 .grid {
@@ -105,11 +115,16 @@ $breakpoint-mobile: 800px;
   color: white;
   padding: .7em 2em;
   border-radius: 1.2em;
-  background-color: #5cac4b;
+  background-color: $link-color;
   display: inline-block;
 
   &:hover {
-    background-color: darken(#5cac4b, 5%);
+    background-color: $link-hover-color;
     color: white;
   }
+}
+
+.content-wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
 }

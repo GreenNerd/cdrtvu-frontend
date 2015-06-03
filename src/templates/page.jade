@@ -1,7 +1,8 @@
 extends ./share/layout.jade
 block body
-  .header.page-header
+  header
     include ./share/head-nav-pc.jade
-    include ./page/header-mobile.jade
+    - var title = '文章标题'
+    include ./share/head-nav-mobile.jade
   include ./page/content.jade
   include ./share/footer.jade

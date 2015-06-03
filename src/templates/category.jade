@@ -1,7 +1,8 @@
 extends ./share/layout.jade
 block body
-  .header.category-header
+  header
     include ./share/head-nav-pc.jade
-    include ./category/header-mobile.jade
+    - var title = '分类首页'
+    include ./share/head-nav-mobile.jade
   include ./category/pages.jade
   include ./share/footer.jade

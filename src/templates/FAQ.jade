@@ -1,8 +1,9 @@
 extends ./share/layout.jade
 block body
-  .header.faq-header
+  header
     include ./share/head-nav-pc.jade
-    include ./faq/header-mobile.jade
+    - var title = '常见问题'
+    include ./share/head-nav-mobile.jade
   include ./faq/category-nav.jade
   include ./faq/sections.jade
   include ./share/footer.jade

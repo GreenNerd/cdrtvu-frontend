@@ -17,17 +17,22 @@ html {
 p {
   letter-spacing: 1px;
   line-height: 2;
-  font-size: .8rem;
+  font-size: .9rem;
   margin: 1.5em 0;
 }
 
 a {
-  color: lighten(#5cac4b, 5%);
+  color: $link-color;
   text-decoration: none;
 
-  &:hover {
-    color: #5cac4b;
+  &:hover, &:active {
+    color: $link-hover-color;
   }
+}
+
+em {
+  font-weight: bold;
+  color: $link-color;
 }
 
 img {
