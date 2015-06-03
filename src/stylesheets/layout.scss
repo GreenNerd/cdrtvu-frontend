@@ -48,14 +48,13 @@ header {
 
 @media only screen and (max-width: $breakpoint-mobile) {
   header {
-    position: relative;
+    position: absolute;
 
     & + div {
-      margin-top: 0!important;
+      margin-top: 3.6rem!important;
     }
 
     &.index-header {
-      position: absolute;
       background-color: transparent;
     }
   }
