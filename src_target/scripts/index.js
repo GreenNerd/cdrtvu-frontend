@@ -1,11 +1,13 @@
 $(function() {
   var IndexCtrl;
   IndexCtrl = {
+    mobileDevice: /mobile/.test(navigator.appVersion.toLowerCase()),
     init: function() {
       this.pcScroll();
       this.mobileBars();
       this.enableSubMenu();
-      return this.enableCategorySwitch();
+      this.enableCategorySwitch();
+      return this.enableImgsWall();
     },
     pcScroll: function() {
       return $(document).scroll(function(event) {
@@ -79,6 +81,14 @@ $(function() {
         }
         return setCategoryIndex(getCurrentIndex() + 1);
       });
+    },
+    enableImgsWall: function() {
+      var $container, $imgs, item_width, line;
+      line = this.mobileDevice ? 3 : 2;
+      $container = $('#imgs_wall');
+      $imgs = $container.children();
+      item_width = $imgs.eq(0).width();
+      return $container.css('width', Math.ceil($imgs.length / line) * item_width);
     }
   };
   return IndexCtrl.init();

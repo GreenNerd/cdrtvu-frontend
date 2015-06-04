@@ -1,10 +1,12 @@
 $ ->
   IndexCtrl =
+    mobileDevice: ///mobile///.test navigator.appVersion.toLowerCase()
     init: ->
       @pcScroll()
       @mobileBars()
       @enableSubMenu()
       @enableCategorySwitch()
+      @enableImgsWall()
 
     pcScroll: ->
       $(document).scroll (event)->
@@ -67,5 +69,11 @@ $ ->
           return true if $(event.target).hasClass('disabled')
           setCategoryIndex(getCurrentIndex() + 1)
 
+    enableImgsWall: ->
+      line = if @mobileDevice then 3 else 2
+      $container = $('#imgs_wall')
+      $imgs = $container.children()
+      item_width = $imgs.eq(0).width()
+      $container.css 'width', Math.ceil($imgs.length / line)*item_width
 
   IndexCtrl.init()

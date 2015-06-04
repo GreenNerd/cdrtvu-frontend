@@ -4,6 +4,7 @@ $link-hover-color: #5cac4b;
 $mask-color: rgba(0, 0, 0, 0.5);
 $nav-bgc: rgba(92, 172, 75, 0.9);
 $max-width: 1200px;
+$img-wall-size: 12rem;
 
 @mixin transition {
   -webkit-transition: all .3s ease-in-out;

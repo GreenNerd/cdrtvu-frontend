@@ -1,16 +1,13 @@
-$namecard-size: 12.5rem;
-.namecards {
-  text-align: center!important;
-  overflow: hidden;
-  max-height: 3 * $namecard-size;
-  padding: 0!important;
+#namecards {
+  overflow-x: scroll;
+  padding: 0;
+  max-width: 100%;
 }
 
 .card-item {
   position: relative;
   overflow: hidden;
-  height: $namecard-size;
-  width: $namecard-size;
+  width: $img-wall-size;
 
   .name {
     margin-top: 0;
@@ -74,12 +71,5 @@ $namecard-size: 12.5rem;
     span {
       margin-left: .5rem;
     }
-  }
-}
-
-@media only screen and (max-width: $breakpoint-mobile) {
-  .card-item {
-    width: 50%;
-    max-width: $namecard-size;
   }
 }
