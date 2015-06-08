@@ -18,7 +18,7 @@ function compileCoffee(source) {
 function compileSass(source) {
   gulp
     .src(source, {base: '.' + watch.sass.sourceDir})
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(gulp.dest('.' + watch.sass.targetDir));
 };
 
