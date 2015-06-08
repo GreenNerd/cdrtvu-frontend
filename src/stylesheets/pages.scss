@@ -34,7 +34,6 @@
     }
 
     .page-created_at {
-      font-size: .8rem;
       float: right;
     }
 
@@ -70,23 +69,20 @@
 .page-container {
   padding: 1rem;
 
-  h3 {
+  h2, h4 {
     color: $link-color;
     margin: .5rem 0;
     line-height: 1.5;
-  }
-
-  .page-created_at {
-    font-size: .8rem;
+    font-weight: normal;
   }
 
   .page-main-content {
-    width: 67%;
+    width: 60%;
   }
 
   .page-body {
     img {
-      max-width: 100%;
+      width: 100%;
     }
 
     p {
@@ -95,10 +91,10 @@
   }
 
   .related-pages {
-    width: 33%;
-    padding: 0 1.5rem;
+    width: 30%;
+    margin-left: 10%;
 
-    h3 {
+    h4 {
       border-bottom: 1px solid #999999;
       padding-bottom: .5rem;
     }
@@ -118,9 +114,19 @@
       .relate-page-title {
         font-size: .9rem;
         line-height: 1.5;
+        color: lighten(#444444, 15%);
+
+        &:hover {
+          color: #444444;
+        }
       }
     }
   }
+}
+
+.page-created_at {
+  color: #999999;
+  font-size: .8rem;
 }
 
 @media only screen and (max-width: $breakpoint-mobile) {

@@ -1256,7 +1256,6 @@ header.index-header .nav {
 }
 
 .pages-container .page-item-content .page-created_at {
-  font-size: .8rem;
   float: right;
 }
 
@@ -1291,22 +1290,19 @@ header.index-header .nav {
   padding: 1rem;
 }
 
-.page-container h3 {
+.page-container h2, .page-container h4 {
   color: #6ab75a;
   margin: .5rem 0;
   line-height: 1.5;
-}
-
-.page-container .page-created_at {
-  font-size: .8rem;
+  font-weight: normal;
 }
 
 .page-container .page-main-content {
-  width: 67%;
+  width: 60%;
 }
 
 .page-container .page-body img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .page-container .page-body p {
@@ -1314,11 +1310,11 @@ header.index-header .nav {
 }
 
 .page-container .related-pages {
-  width: 33%;
-  padding: 0 1.5rem;
+  width: 30%;
+  margin-left: 10%;
 }
 
-.page-container .related-pages h3 {
+.page-container .related-pages h4 {
   border-bottom: 1px solid #999999;
   padding-bottom: .5rem;
 }
@@ -1339,6 +1335,16 @@ header.index-header .nav {
 .page-container .related-pages a .relate-page-title {
   font-size: .9rem;
   line-height: 1.5;
+  color: #6a6a6a;
+}
+
+.page-container .related-pages a .relate-page-title:hover {
+  color: #444444;
+}
+
+.page-created_at {
+  color: #999999;
+  font-size: .8rem;
 }
 
 @media only screen and (max-width: 800px) {
