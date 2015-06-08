@@ -78,11 +78,11 @@ header {
     text-align: right;
     vertical-align: middle;
     padding-top: .7rem;
-    margin-right: -1.5rem;
+    margin-right: -1rem;
   }
 
   .nav-item {
-    padding: .7rem 1.5rem;
+    padding: .7rem 1rem;
     color: #c6f8b7;
     display: inline;
     position: relative;
@@ -110,7 +110,6 @@ header {
     right: 0;
     padding: 0 1rem;
     background-color: $link-color;
-    box-shadow: 0 0 4px 0 #333;
 
     .sub-nav-item {
       color: #c6f8b7;

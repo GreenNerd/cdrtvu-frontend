@@ -409,11 +409,11 @@ header.index-header .nav {
   text-align: right;
   vertical-align: middle;
   padding-top: .7rem;
-  margin-right: -1.5rem;
+  margin-right: -1rem;
 }
 
 .nav .nav-item {
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 1rem;
   color: #c6f8b7;
   display: inline;
   position: relative;
@@ -449,7 +449,6 @@ header.index-header .nav {
   right: 0;
   padding: 0 1rem;
   background-color: #6ab75a;
-  box-shadow: 0 0 4px 0 #333;
 }
 
 .nav .sub-nav-list .sub-nav-item {
@@ -864,9 +863,10 @@ header.index-header .nav {
 .categories-panel .switch-control {
   position: absolute;
   z-index: 10;
-  top: .8rem;
+  top: .6rem;
   right: 1rem;
   background-color: white;
+  font-size: 1.4rem;
 }
 
 .categories-panel .switch-control i {
