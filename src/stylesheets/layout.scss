@@ -41,9 +41,8 @@ header {
 }
 
 .map-panel {
-  img {
-    width: 100%;
-  }
+  width: 100%;
+  height: 50%;
 }
 
 @media only screen and (max-width: $breakpoint-mobile) {
@@ -57,5 +56,9 @@ header {
     &.index-header {
       background-color: transparent;
     }
+  }
+
+  .map-panel {
+    height: 80%;
   }
 }

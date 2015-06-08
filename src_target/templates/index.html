@@ -2,13 +2,16 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>page title</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="FAQ.js"></script>
+    <script type="text/javascript" src="https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js"></script>
+    <script type="text/javascript" src="map.js"></script>
   </head>
   <body>
     <header class="index-header">
@@ -143,7 +146,7 @@
         </div>
       </div>
     </div>
-    <div class="panel-item map-panel"><img src="http://img0.imgtn.bdimg.com/it/u=4280815238,2816045642&amp;fm=21&amp;gp=0.jpg" alt="map"></div>
+    <div id="map" class="panel-item map-panel"></div>
     <div class="panel-item footer-panel">
       <div class="panel-wrapper content-wrapper">
         <div class="panel-content grid">
