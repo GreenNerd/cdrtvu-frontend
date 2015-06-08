@@ -1,0 +1,26 @@
+.pagination {
+  padding: 1rem;
+  padding-top: 0;
+
+  .pagination-wrapper {
+    @include centered-block;
+
+    .btn {
+      margin: 0 .3rem;
+    }
+
+    .ellipsis {
+      vertical-align: middle;
+      display: inline-block;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .first {
+    margin-right: .5rem;
+  }
+
+  .last {
+    margin-left: .5rem;
+  }
+}

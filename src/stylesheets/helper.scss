@@ -112,16 +112,18 @@ $img-wall-size: 12rem;
 }
 
 .btn {
-  padding: .7rem 1rem;
+  padding: .5rem .8rem;
   display: inline-block;
-  background-color: #dddddd;
+  background-color: #eeeeee;
   vertical-align: middle;
   color: #333333;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
+  @include transition;
 
   &:hover {
-    background-color: #cccccc;
+    background-color: #dddddd;
   }
 
   &.btn-block {

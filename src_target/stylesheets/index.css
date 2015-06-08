@@ -102,17 +102,23 @@
 }
 
 .btn {
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 0.8rem;
   display: inline-block;
-  background-color: #dddddd;
+  background-color: #eeeeee;
   vertical-align: middle;
   color: #333333;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background-color: #cccccc;
+  background-color: #dddddd;
 }
 
 .btn.btn-block {
@@ -244,6 +250,48 @@ header + div {
   .map-panel {
     height: 80%;
   }
+}
+
+.pagination {
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.pagination .pagination-wrapper {
+  font-size: 0;
+  text-align: center;
+}
+
+.pagination .pagination-wrapper > * {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.pagination .pagination-wrapper::before {
+  height: 100%;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pagination .pagination-wrapper .btn {
+  margin: 0 0.3rem;
+}
+
+.pagination .pagination-wrapper .ellipsis {
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.pagination .first {
+  margin-right: .5rem;
+}
+
+.pagination .last {
+  margin-left: .5rem;
 }
 
 header .service-links {
