@@ -7,6 +7,7 @@ $ ->
       @enableSubMenu()
       @enableCategorySwitch()
       @enableImgsWall()
+      @initPageCover() if $('#page_cover').length
 
     pcScroll: ->
       $(document).scroll (event)->
@@ -75,5 +76,8 @@ $ ->
       $imgs = $container.children()
       item_width = $imgs.eq(0).width()
       $container.css 'width', Math.ceil($imgs.length / line)*item_width
+
+    initPageCover: ->
+      $('#page_cover').prev().addClass('with-cover')
 
   IndexCtrl.init()

@@ -7,7 +7,10 @@ $(function() {
       this.mobileBars();
       this.enableSubMenu();
       this.enableCategorySwitch();
-      return this.enableImgsWall();
+      this.enableImgsWall();
+      if ($('#page_cover').length) {
+        return this.initPageCover();
+      }
     },
     pcScroll: function() {
       return $(document).scroll(function(event) {
@@ -89,6 +92,9 @@ $(function() {
       $imgs = $container.children();
       item_width = $imgs.eq(0).width();
       return $container.css('width', Math.ceil($imgs.length / line) * item_width);
+    },
+    initPageCover: function() {
+      return $('#page_cover').prev().addClass('with-cover');
     }
   };
   return IndexCtrl.init();
