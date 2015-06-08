@@ -111,17 +111,39 @@ $img-wall-size: 12rem;
   }
 }
 
-.btn-primary {
-  text-decoration: none;
-  color: white;
-  padding: .7em 2em;
-  border-radius: 1.5em;
-  background-color: $link-color;
+.btn {
+  padding: .7rem 1rem;
   display: inline-block;
+  background-color: #dddddd;
+  vertical-align: middle;
+  color: #333333;
+  cursor: pointer;
+  text-decoration: none;
 
   &:hover {
-    background-color: $link-hover-color;
+    background-color: #cccccc;
+  }
+
+  &.btn-block {
+    display: block!important;
+  }
+
+  &.rounded {
+    padding: .7rem 2rem;
+    border-radius: 1.5rem;
+  }
+
+  &.btn-primary, &.active {
+    background-color: $link-color!important;
     color: white;
+
+    &:hover {
+      background-color: $link-hover-color!important;
+    }
+  }
+
+  &.active {
+    cursor: default;
   }
 }
 

@@ -101,18 +101,40 @@
   }
 }
 
-.btn-primary {
-  text-decoration: none;
-  color: white;
-  padding: 0.7em 2em;
-  border-radius: 1.5em;
-  background-color: #6ab75a;
+.btn {
+  padding: 0.7rem 1rem;
   display: inline-block;
+  background-color: #dddddd;
+  vertical-align: middle;
+  color: #333333;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.btn-primary:hover {
-  background-color: #5cac4b;
+.btn:hover {
+  background-color: #cccccc;
+}
+
+.btn.btn-block {
+  display: block !important;
+}
+
+.btn.rounded {
+  padding: 0.7rem 2rem;
+  border-radius: 1.5rem;
+}
+
+.btn.btn-primary, .btn.active {
+  background-color: #6ab75a !important;
   color: white;
+}
+
+.btn.btn-primary:hover, .btn.active:hover {
+  background-color: #5cac4b !important;
+}
+
+.btn.active {
+  cursor: default;
 }
 
 .content-wrapper {
