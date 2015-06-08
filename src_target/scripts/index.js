@@ -86,12 +86,43 @@ $(function() {
       });
     },
     enableImgsWall: function() {
-      var $container, $imgs, item_width, line;
+      var $container, $imgs, $wrapper, item_width, line, setScrollLeft, total_width, wrapper_width;
       line = this.mobileDevice ? 3 : 2;
       $container = $('#imgs_wall');
       $imgs = $container.children();
+      $wrapper = $container.closest('.imgs-wall');
+      wrapper_width = $wrapper.width();
       item_width = $imgs.eq(0).width();
-      return $container.css('width', Math.ceil($imgs.length / line) * item_width);
+      total_width = Math.ceil($imgs.length / line) * item_width;
+      if (wrapper_width >= total_width) {
+        $('#imgs_wall_ctrl').remove();
+        return true;
+      }
+      $container.css('width', total_width);
+      setScrollLeft = function(number) {
+        var $prev;
+        $wrapper.scrollLeft(number);
+        $prev = $('#imgs_wall_ctrl').children('.prev');
+        if (number <= 0) {
+          return $prev.addClass('disabled').next().removeClass('disabled');
+        } else if (number >= total_width - wrapper_width) {
+          return $prev.removeClass('disabled').next().addClass('disabled');
+        } else {
+          return $prev.removeClass('disabled').next().removeClass('disabled');
+        }
+      };
+      setScrollLeft(0);
+      return $('#imgs_wall_ctrl').on('click', '.prev', function(event) {
+        var startLeft;
+        event.stopPropagation();
+        startLeft = $wrapper.scrollLeft();
+        return setScrollLeft(Math.max(0, startLeft - wrapper_width / 2));
+      }).on('click', '.next', function(event) {
+        var startLeft;
+        event.stopPropagation();
+        startLeft = $wrapper.scrollLeft();
+        return setScrollLeft(Math.min(startLeft + wrapper_width / 2, total_width - wrapper_width));
+      });
     },
     initPageCover: function() {
       return $('#page_cover').prev().addClass('with-cover');

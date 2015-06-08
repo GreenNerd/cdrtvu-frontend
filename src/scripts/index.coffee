@@ -74,8 +74,38 @@ $ ->
       line = if @mobileDevice then 3 else 2
       $container = $('#imgs_wall')
       $imgs = $container.children()
+      $wrapper = $container.closest('.imgs-wall')
+      wrapper_width = $wrapper.width()
       item_width = $imgs.eq(0).width()
-      $container.css 'width', Math.ceil($imgs.length / line)*item_width
+      total_width = Math.ceil($imgs.length / line)*item_width
+
+      if wrapper_width >= total_width
+        $('#imgs_wall_ctrl').remove()
+        return true
+
+      $container.css 'width', total_width
+
+      setScrollLeft = (number)->
+        $wrapper.scrollLeft(number)
+        $prev = $('#imgs_wall_ctrl').children('.prev')
+        if number <= 0
+          $prev.addClass('disabled').next().removeClass('disabled')
+        else if number >= total_width - wrapper_width
+          $prev.removeClass('disabled').next().addClass('disabled')
+        else
+          $prev.removeClass('disabled').next().removeClass('disabled')
+
+      setScrollLeft(0)
+
+      $('#imgs_wall_ctrl')
+        .on 'click', '.prev', (event)->
+          event.stopPropagation()
+          startLeft = $wrapper.scrollLeft()
+          setScrollLeft Math.max(0, startLeft - wrapper_width / 2)
+        .on 'click', '.next', (event)->
+          event.stopPropagation()
+          startLeft = $wrapper.scrollLeft()
+          setScrollLeft Math.min(startLeft + wrapper_width / 2, total_width - wrapper_width)
 
     initPageCover: ->
       $('#page_cover').prev().addClass('with-cover')
