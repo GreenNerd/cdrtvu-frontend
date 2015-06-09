@@ -7,10 +7,7 @@ $(function() {
       this.mobileBars();
       this.enableSubMenu();
       this.enableCategorySwitch();
-      this.enableImgsWall();
-      if ($('#page_cover').length) {
-        return this.initPageCover();
-      }
+      return this.enableImgsWall();
     },
     pcScroll: function() {
       return $(document).scroll(function(event) {
@@ -123,9 +120,6 @@ $(function() {
         startLeft = $wrapper.scrollLeft();
         return setScrollLeft(Math.min(startLeft + wrapper_width / 2, total_width - wrapper_width));
       });
-    },
-    initPageCover: function() {
-      return $('#page_cover').prev().addClass('with-cover');
     }
   };
   return IndexCtrl.init();

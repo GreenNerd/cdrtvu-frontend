@@ -228,14 +228,22 @@ header {
   height: 60%;
 }
 
-#page_cover {
-  max-height: 0;
-  overflow: hidden;
-  margin-bottom: 6rem;
+.page-title-panel {
+  background-size: cover;
+  background-position: center center;
+  background-image: none;
+  height: 6rem;
 }
 
-#page_cover img {
+.page-title-panel .mobile-page-title {
+  font-size: 1.2rem;
+  color: white;
+  height: 100%;
   width: 100%;
+  line-height: 6rem;
+  text-align: center;
+  background-color: rgba(92, 172, 75, 0.9);
+  display: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -245,9 +253,11 @@ header {
   .map-panel {
     height: 80%;
   }
-  #page_cover {
-    max-height: none;
-    margin-bottom: 0;
+  .page-title-panel {
+    background-image: url(2.png);
+  }
+  .page-title-panel .mobile-page-title {
+    display: block;
   }
 }
 
@@ -1293,6 +1303,10 @@ header {
 
 .page-container .related-pages a .relate-page-title:hover {
   color: #444444;
+}
+
+.page-header-cover img {
+  width: 100%;
 }
 
 .page-created_at {

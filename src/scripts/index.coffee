@@ -7,7 +7,6 @@ $ ->
       @enableSubMenu()
       @enableCategorySwitch()
       @enableImgsWall()
-      @initPageCover() if $('#page_cover').length
 
     pcScroll: ->
       $(document).scroll (event)->
@@ -106,8 +105,5 @@ $ ->
           event.stopPropagation()
           startLeft = $wrapper.scrollLeft()
           setScrollLeft Math.min(startLeft + wrapper_width / 2, total_width - wrapper_width)
-
-    initPageCover: ->
-      $('#page_cover').prev().addClass('with-cover')
 
   IndexCtrl.init()

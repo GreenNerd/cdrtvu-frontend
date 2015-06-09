@@ -2,7 +2,8 @@ extends ./share/layout.jade
 block body
   header
     include ./share/head-nav-pc.jade
-    - var title = '分类首页'
     include ./share/head-nav-mobile.jade
+  - var title = '新闻聚焦'
+  include ./share/title.jade
   include ./category/pages.jade
   include ./share/footer.jade
