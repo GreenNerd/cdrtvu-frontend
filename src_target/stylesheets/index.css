@@ -389,7 +389,7 @@ header {
 }
 
 .nav .nav-item:hover .sub-nav-list, .nav .nav-item.active .sub-nav-list, .nav .nav-item:active .sub-nav-list {
-  max-height: 12rem;
+  max-height: 16rem;
 }
 
 .nav .sub-nav-list {
