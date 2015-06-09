@@ -704,7 +704,7 @@ header {
 }
 
 .imgs-wall {
-  overflow-x: scroll;
+  overflow-x: hidden;
   max-width: 100%;
   margin-top: 1.8rem;
   margin-bottom: 2rem;
@@ -801,6 +801,7 @@ header {
   }
   .imgs-wall {
     margin-bottom: 0;
+    overflow-x: scroll;
     padding: 0 !important;
   }
   .imgs-wall .image-item img:hover {
