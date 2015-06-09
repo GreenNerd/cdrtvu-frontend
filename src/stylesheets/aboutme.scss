@@ -1,7 +1,7 @@
 .card-item {
   position: relative;
   overflow: hidden;
-  width: $img-wall-size;
+  width: 20%;
 
   .name {
     margin-top: 0;
@@ -66,5 +66,29 @@
     span {
       margin-left: .5rem;
     }
+  }
+}
+
+#namecards {
+  margin-top: 1.8rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: $breakpoint-pc) {
+  .card-item {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .card-item {
+    width: 50%;
+  }
+
+  #namecards {
+    padding: 0;
+    margin-bottom: 0;
   }
 }

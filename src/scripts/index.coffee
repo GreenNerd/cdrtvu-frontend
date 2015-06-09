@@ -6,7 +6,7 @@ $ ->
       @mobileBars()
       @enableSubMenu()
       @enableCategorySwitch()
-      @enableImgsWall()
+      @enableImgsWall() if $('#imgs_wall_container').length
 
     pcScroll: ->
       $(document).scroll (event)->

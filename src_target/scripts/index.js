@@ -7,7 +7,9 @@ $(function() {
       this.mobileBars();
       this.enableSubMenu();
       this.enableCategorySwitch();
-      return this.enableImgsWall();
+      if ($('#imgs_wall_container').length) {
+        return this.enableImgsWall();
+      }
     },
     pcScroll: function() {
       return $(document).scroll(function(event) {
