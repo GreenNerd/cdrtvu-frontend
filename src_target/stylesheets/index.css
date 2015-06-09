@@ -1313,6 +1313,11 @@ header {
   font-size: .9rem;
   line-height: 1.5;
   color: #6a6a6a;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .page-container .related-pages a .relate-page-title:hover {

@@ -115,6 +115,7 @@
         font-size: .9rem;
         line-height: 1.5;
         color: lighten(#444444, 15%);
+        @include line-clamp(2);
 
         &:hover {
           color: #444444;
