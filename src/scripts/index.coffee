@@ -21,17 +21,25 @@ $ ->
         $('#header_nav_mobile').toggleClass('expanded')
 
     enableSubMenu: ->
-      $('#header_nav_mobile').on 'click', '.has-sub-nav', (event)->
+      $('#header_nav_mobile').on 'click', '.has-sub-nav', (event)=>
         event.stopPropagation()
         event.preventDefault()
         $target = $(event.target).closest('a')
         $relate = $ $target.attr('href')
-        if $target.hasClass('active')
+        isActived = $target.hasClass('active')
+
+        if @activeSubNavs
+          @activeSubNavs.removeClass('active')
+          $(@activeSubNavs.attr('href')).removeClass('active')
+
+        if isActived
           $relate.removeClass('active')
           $target.removeClass('active')
+          @activeSubNavs = null
         else
           $target.addClass('active')
           $relate.addClass('active')
+          @activeSubNavs = $target
 
     enableCategorySwitch: ->
       $container = $('#categories_container')

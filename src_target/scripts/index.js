@@ -26,20 +26,29 @@ $(function() {
       });
     },
     enableSubMenu: function() {
-      return $('#header_nav_mobile').on('click', '.has-sub-nav', function(event) {
-        var $relate, $target;
-        event.stopPropagation();
-        event.preventDefault();
-        $target = $(event.target).closest('a');
-        $relate = $($target.attr('href'));
-        if ($target.hasClass('active')) {
-          $relate.removeClass('active');
-          return $target.removeClass('active');
-        } else {
-          $target.addClass('active');
-          return $relate.addClass('active');
-        }
-      });
+      return $('#header_nav_mobile').on('click', '.has-sub-nav', (function(_this) {
+        return function(event) {
+          var $relate, $target, isActived;
+          event.stopPropagation();
+          event.preventDefault();
+          $target = $(event.target).closest('a');
+          $relate = $($target.attr('href'));
+          isActived = $target.hasClass('active');
+          if (_this.activeSubNavs) {
+            _this.activeSubNavs.removeClass('active');
+            $(_this.activeSubNavs.attr('href')).removeClass('active');
+          }
+          if (isActived) {
+            $relate.removeClass('active');
+            $target.removeClass('active');
+            return _this.activeSubNavs = null;
+          } else {
+            $target.addClass('active');
+            $relate.addClass('active');
+            return _this.activeSubNavs = $target;
+          }
+        };
+      })(this));
     },
     enableCategorySwitch: function() {
       var $container, $control, $next, $prev, count, getCurrentIndex, setCategoryIndex, setControlStatus, startIndex;
