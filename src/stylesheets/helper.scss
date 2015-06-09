@@ -147,6 +147,17 @@ $img-wall-size: 12rem;
   &.active {
     cursor: default;
   }
+
+  &.disabled {
+    cursor: default;
+    color: #7b7b7b;
+    background-color: #c3c3c3;
+
+    &:hover {
+      background-color: #c3c3c3;
+      color: #7b7b7b;
+    }
+  }
 }
 
 .content-wrapper {

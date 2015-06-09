@@ -143,6 +143,17 @@
   cursor: default;
 }
 
+.btn.disabled {
+  cursor: default;
+  color: #7b7b7b;
+  background-color: #c3c3c3;
+}
+
+.btn.disabled:hover {
+  background-color: #c3c3c3;
+  color: #7b7b7b;
+}
+
 .content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -1322,6 +1333,24 @@ header {
 
 .page-container .related-pages a .relate-page-title:hover {
   color: #444444;
+}
+
+.page-container .page-attachments span {
+  float: left;
+}
+
+.page-container .page-attachments .attachments-list {
+  margin-left: 3rem;
+}
+
+.page-container .page-attachments .attachments-list a {
+  display: block;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+
+.page-container .page-attachments .attachments-list a:hover {
+  text-decoration: underline;
 }
 
 .page-header-cover img {
