@@ -1426,6 +1426,7 @@ header {
 
 .card-item img {
   display: block;
+  width: 100%;
 }
 
 .card-item .card-mobile-content {
