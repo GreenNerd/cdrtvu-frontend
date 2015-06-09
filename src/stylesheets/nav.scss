@@ -1,38 +1,8 @@
-header {
-  .service-links {
-    display: none;
-  }
-
-  .header-title {
-    display: block;
-    position: absolute;
-    top: .5rem;
-    line-height: 2.6rem;
-    text-align: center;
-    font-size: 1.2rem;
-    width: 100%;
-    color: white;
-  }
-
-  &.index-header {
-    .service-links {
-      display: block;
-    }
-
-    .header-title {
-      display: none;
-    }
-
-    .nav {
-      background-color: transparent;
-    }
-  }
-}
-
 .nav {
   color: white;
   height: 4.5rem;
   padding: 1rem;
+  background-color: $nav-bgc;
   @include transition;
 
   &.expanded {
@@ -95,7 +65,7 @@ header {
       color: white;
 
       .sub-nav-list {
-        max-height: 10rem;
+        max-height: 12rem;
       }
     }
   }
@@ -134,13 +104,13 @@ header {
   @include transition;
 
   .service-links {
-    padding-top: .8rem;
-    margin-top: .5rem;
+    display: none;
+    float: right;
+    margin-top: 1.3rem;
 
     a {
       color: white;
-      font-size: 1rem;
-      margin-right: 1em;
+      margin-right: 1rem;
     }
   }
 
@@ -153,6 +123,7 @@ header {
     position: relative;
     z-index: 11;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, .8);
   }
 
   .menu-details {
@@ -256,6 +227,14 @@ header {
     color: #333333;
     box-shadow: 0 0 4px 0 #666666;
 
+    .service-links {
+      display: block;
+
+      a {
+        color: #666666;
+      }
+    }
+
     #menu_icon {
       color: #333333;
       background-color: transparent;
@@ -265,14 +244,16 @@ header {
       max-height: 30rem;
     }
 
-    .service-links {
-      a {
-        color: #333333;
-      }
-    }
-
     .header-title {
       color: #333333;
+    }
+  }
+}
+
+.index-header {
+  #header_nav_mobile {
+    .service-links {
+      display: block;
     }
   }
 }

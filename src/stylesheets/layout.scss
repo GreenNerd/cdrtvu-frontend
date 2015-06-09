@@ -1,22 +1,9 @@
 header {
   position: fixed;
   z-index: 10;
-  background-color: $nav-bgc;
   top: 0;
   left: 0;
   width: 100%;
-
-  &.index-header, &.with-cover {
-    padding-bottom: 0;
-
-    & + div {
-      margin-top: 0!important;
-    }
-  }
-
-  & + div {
-    margin-top: 6rem!important;
-  }
 }
 
 .panel-item {
@@ -58,33 +45,6 @@ header {
 @media only screen and (max-width: $breakpoint-mobile) {
   header {
     position: absolute;
-
-    & + div {
-      margin-top: 3.6rem!important;
-    }
-
-    &.with-cover {
-      background-color: transparent;
-
-      .header-title {
-        display: none;
-      }
-
-      #menu_icon {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
-
-      .expanded {
-
-        .header-title {
-          display: block;
-        }
-      }
-    }
-
-    &.index-header {
-      background-color: transparent;
-    }
   }
 
   .map-panel {
