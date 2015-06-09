@@ -78,15 +78,13 @@ $ ->
       item_width = $imgs.eq(0).width()
       total_width = Math.ceil($imgs.length / line)*item_width
 
-      if wrapper_width >= total_width
-        $('#imgs_wall_ctrl').remove()
-        return true
+      return true if wrapper_width >= total_width
 
       $container.css 'width', total_width
 
       setMarginLeft = (number)->
         $container.css 'margin-left', "#{number}px"
-        $prev = $('#imgs_wall_ctrl').children('.prev')
+        $prev = $('#imgs_wall_container').children('.prev')
         if number >= 0
           $prev.addClass('disabled').next().removeClass('disabled')
         else if number <= wrapper_width - total_width
@@ -96,7 +94,7 @@ $ ->
 
       setMarginLeft(0)
 
-      $('#imgs_wall_ctrl')
+      $('#imgs_wall_container')
         .on 'click', '.prev', (event)->
           event.stopPropagation()
           startLeft = parseInt $container.css('margin-left')

@@ -1,7 +1,7 @@
 .panel-item.photos-preview
   .panel-wrapper.content-wrapper
     h3 校园掠影
-    .panel-content.position-element
+    .panel-content.position-element#imgs_wall_container
       .imgs-wall
         .grid#imgs_wall
           .image-item
@@ -32,8 +32,7 @@
             img(src='http://img0.bdstatic.com/img/image/shouye/dongman0316.jpg' alt='imgs')
           .image-item
             img(src='http://img0.bdstatic.com/img/image/shouye/jianbihua0527.jpg' alt='imgs')
-      #imgs_wall_ctrl.hidden-mobile
-        .prev
-          i.fa.fa-angle-left
-        .next
-          i.fa.fa-angle-right
+      .prev.hidden-mobile
+        i.fa.fa-angle-left
+      .next.hidden-mobile
+        i.fa.fa-angle-right

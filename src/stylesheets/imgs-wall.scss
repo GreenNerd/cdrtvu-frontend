@@ -36,19 +36,15 @@
   }
 }
 
-#imgs_wall_ctrl {
-  position: absolute;
+#imgs_wall_container {
   z-index: 6;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 
   .prev, .next {
     height: 100%;
     display: inline-block;
     width: 4rem;
     color: white;
+    z-index: 7;
     @include centered-block;
     cursor: pointer;
     position: absolute;

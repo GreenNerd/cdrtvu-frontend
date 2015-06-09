@@ -9,7 +9,7 @@
 .panel-item.photos-preview
   .panel-wrapper.content-wrapper
     h3 我们的团队
-    .panel-content.position-element
+    .panel-content.position-element#imgs_wall_container
       .imgs-wall
         .grid#imgs_wall
           .card-item
@@ -172,8 +172,7 @@
                 .position 赞助上
                 .mobilephone 请叫我雷锋
             img(src="http://img2.imgtn.bdimg.com/it/u=2118274578,2159811908&fm=23&gp=0.jpg", alt="card-photo")
-      #imgs_wall_ctrl.hidden-mobile
-        .prev
-          i.fa.fa-angle-left
-        .next
-          i.fa.fa-angle-right
+      .prev.hidden-mobile
+        i.fa.fa-angle-left
+      .next.hidden-mobile
+        i.fa.fa-angle-right

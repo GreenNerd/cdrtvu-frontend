@@ -92,14 +92,13 @@ $(function() {
       item_width = $imgs.eq(0).width();
       total_width = Math.ceil($imgs.length / line) * item_width;
       if (wrapper_width >= total_width) {
-        $('#imgs_wall_ctrl').remove();
         return true;
       }
       $container.css('width', total_width);
       setMarginLeft = function(number) {
         var $prev;
         $container.css('margin-left', number + "px");
-        $prev = $('#imgs_wall_ctrl').children('.prev');
+        $prev = $('#imgs_wall_container').children('.prev');
         if (number >= 0) {
           return $prev.addClass('disabled').next().removeClass('disabled');
         } else if (number <= wrapper_width - total_width) {
@@ -109,7 +108,7 @@ $(function() {
         }
       };
       setMarginLeft(0);
-      return $('#imgs_wall_ctrl').on('click', '.prev', function(event) {
+      return $('#imgs_wall_container').on('click', '.prev', function(event) {
         var startLeft;
         event.stopPropagation();
         startLeft = parseInt($container.css('margin-left'));
