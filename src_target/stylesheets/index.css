@@ -1289,16 +1289,16 @@ header {
   font-weight: normal;
 }
 
+.page-container h2 {
+  margin-bottom: .2rem;
+}
+
 .page-container .page-main-content {
   width: 60%;
 }
 
 .page-container .page-body img {
   width: 100%;
-}
-
-.page-container .page-body p {
-  text-indent: 2em;
 }
 
 .page-container .related-pages {
@@ -1363,7 +1363,7 @@ header {
 
 .page-created_at {
   color: #999999;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 @media only screen and (max-width: 800px) {
