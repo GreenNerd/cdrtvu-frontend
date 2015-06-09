@@ -1,15 +1,17 @@
 .faq-category-item {
-  @include centered-block;
-  height: 7rem;
   margin: .5rem;
-  background-size: cover;
-  background-position: center;
   color: white;
+  display: block;
+  position: relative;
 
   h3 {
     margin: 0;
     text-align: center;
     @include text-ellipsis;
+  }
+
+  img {
+    width: 100%;
   }
 
   p {
@@ -19,9 +21,19 @@
     @include text-ellipsis;
   }
 
-  .category-info {
-    padding: 0 1rem;
+  .centered-position {
+    @include centered-block;
+    position: absolute;
     width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+
+    .category-info {
+      padding: 0 1rem;
+      width: 100%;
+    }
   }
 }
 
