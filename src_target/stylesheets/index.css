@@ -974,7 +974,7 @@ header {
 }
 
 .footer-panel .panel-content {
-  padding: 1rem;
+  padding: 1rem 3rem;
   margin: 0;
 }
 
@@ -1503,7 +1503,7 @@ header {
   text-align: center;
 }
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 1024px) {
   .card-item {
     width: 25%;
   }
