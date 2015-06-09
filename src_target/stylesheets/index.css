@@ -227,7 +227,7 @@ header {
 
 .panel-item .panel-content {
   text-align: left;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 .panel-item .panel-content em {
@@ -317,13 +317,17 @@ header {
 .nav {
   color: white;
   height: 4.5rem;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: rgba(92, 172, 75, 0.9);
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.nav .content-wrapper {
+  padding: 0 1rem;
 }
 
 .nav.expanded {
@@ -362,6 +366,10 @@ header {
   color: white;
 }
 
+.nav .nav-sign .nav-item-mini:last-child {
+  margin-right: -1rem;
+}
+
 .nav .nav-sign .vertical-divider {
   border-left: 1px solid #666;
   font-size: .75rem;
@@ -370,14 +378,12 @@ header {
 
 .nav .nav-sign .nav-list-mini {
   padding-bottom: .5em;
-  margin-right: -1rem;
 }
 
 .nav .nav-list {
   text-align: right;
   vertical-align: middle;
   padding-top: .7rem;
-  margin-right: -1rem;
 }
 
 .nav .nav-item {
@@ -401,6 +407,10 @@ header {
 
 .nav .nav-item:hover .sub-nav-list, .nav .nav-item.active .sub-nav-list, .nav .nav-item:active .sub-nav-list {
   max-height: 16rem;
+}
+
+.nav .nav-item:last-child {
+  margin-right: -1rem;
 }
 
 .nav .sub-nav-list {
@@ -964,7 +974,7 @@ header {
 }
 
 .footer-panel .panel-content {
-  padding: 1rem 2rem;
+  padding: 1rem;
   margin: 0;
 }
 
@@ -990,6 +1000,7 @@ header {
   width: 2.6rem;
   height: 2.6rem;
   position: relative;
+  z-index: 1000;
 }
 
 .footer-panel .extra-link-item.extra-qq {
@@ -1049,6 +1060,14 @@ header {
   padding: .5rem;
 }
 
+.footer-panel .friend-link-item:nth-child(2n) {
+  padding-right: 0;
+}
+
+.footer-panel .friend-link-item:nth-child(2n+1) {
+  padding-left: 0;
+}
+
 .footer-panel .friend-link-item img {
   width: 100%;
   display: block;
@@ -1089,12 +1108,6 @@ header {
   }
   .footer-panel .friend-links > .grid {
     margin: auto;
-  }
-  .footer-panel .friend-link-item {
-    margin: 0;
-    width: 50%;
-    padding: .5rem;
-    padding-bottom: 0;
   }
   .footer-panel .copyright-container {
     border-top: none;
@@ -1166,6 +1179,10 @@ header {
 .faq-category-item .centered-position .category-info {
   padding: 0 1rem;
   width: 100%;
+}
+
+.faq-categories > .grid {
+  margin: 0 0.5rem;
 }
 
 #questions_container {

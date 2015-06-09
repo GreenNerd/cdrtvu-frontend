@@ -1,9 +1,13 @@
 .nav {
   color: white;
   height: 4.5rem;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: $nav-bgc;
   @include transition;
+
+  .content-wrapper {
+    padding: 0 1rem;
+  }
 
   &.expanded {
     height: 6rem;
@@ -30,6 +34,10 @@
       &:hover, &:active {
         color: white;
       }
+
+      &:last-child {
+        margin-right: -1rem
+      }
     }
 
     .vertical-divider {
@@ -40,7 +48,6 @@
 
     .nav-list-mini {
       padding-bottom: .5em;
-      margin-right: -1rem;
     }
   }
 
@@ -48,7 +55,6 @@
     text-align: right;
     vertical-align: middle;
     padding-top: .7rem;
-    margin-right: -1rem;
   }
 
   .nav-item {
@@ -67,6 +73,10 @@
       .sub-nav-list {
         max-height: 16rem;
       }
+    }
+
+    &:last-child {
+      margin-right: -1rem;
     }
   }
 
