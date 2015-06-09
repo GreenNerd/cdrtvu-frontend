@@ -83,7 +83,7 @@ $(function() {
       });
     },
     enableImgsWall: function() {
-      var $container, $imgs, $wrapper, item_width, line, setScrollLeft, total_width, wrapper_width;
+      var $container, $imgs, $wrapper, item_width, line, setMarginLeft, total_width, wrapper_width;
       line = this.mobileDevice ? 3 : 2;
       $container = $('#imgs_wall');
       $imgs = $container.children();
@@ -96,29 +96,29 @@ $(function() {
         return true;
       }
       $container.css('width', total_width);
-      setScrollLeft = function(number) {
+      setMarginLeft = function(number) {
         var $prev;
-        $wrapper.scrollLeft(number);
+        $container.css('margin-left', number + "px");
         $prev = $('#imgs_wall_ctrl').children('.prev');
-        if (number <= 0) {
+        if (number >= 0) {
           return $prev.addClass('disabled').next().removeClass('disabled');
-        } else if (number >= total_width - wrapper_width) {
+        } else if (number <= wrapper_width - total_width) {
           return $prev.removeClass('disabled').next().addClass('disabled');
         } else {
           return $prev.removeClass('disabled').next().removeClass('disabled');
         }
       };
-      setScrollLeft(0);
+      setMarginLeft(0);
       return $('#imgs_wall_ctrl').on('click', '.prev', function(event) {
         var startLeft;
         event.stopPropagation();
-        startLeft = $wrapper.scrollLeft();
-        return setScrollLeft(Math.max(0, startLeft - wrapper_width / 2));
+        startLeft = parseInt($container.css('margin-left'));
+        return setMarginLeft(Math.min(0, startLeft + wrapper_width / 2));
       }).on('click', '.next', function(event) {
         var startLeft;
         event.stopPropagation();
-        startLeft = $wrapper.scrollLeft();
-        return setScrollLeft(Math.min(startLeft + wrapper_width / 2, total_width - wrapper_width));
+        startLeft = parseInt($container.css('margin-left'));
+        return setMarginLeft(Math.max(startLeft - wrapper_width / 2, wrapper_width - total_width));
       });
     }
   };

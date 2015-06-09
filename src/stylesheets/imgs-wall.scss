@@ -8,6 +8,7 @@
 
 #imgs_wall {
   margin: 0 auto;
+  @include transition;
 }
 
 .imgs-wall {

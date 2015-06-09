@@ -84,26 +84,26 @@ $ ->
 
       $container.css 'width', total_width
 
-      setScrollLeft = (number)->
-        $wrapper.scrollLeft(number)
+      setMarginLeft = (number)->
+        $container.css 'margin-left', "#{number}px"
         $prev = $('#imgs_wall_ctrl').children('.prev')
-        if number <= 0
+        if number >= 0
           $prev.addClass('disabled').next().removeClass('disabled')
-        else if number >= total_width - wrapper_width
+        else if number <= wrapper_width - total_width
           $prev.removeClass('disabled').next().addClass('disabled')
         else
           $prev.removeClass('disabled').next().removeClass('disabled')
 
-      setScrollLeft(0)
+      setMarginLeft(0)
 
       $('#imgs_wall_ctrl')
         .on 'click', '.prev', (event)->
           event.stopPropagation()
-          startLeft = $wrapper.scrollLeft()
-          setScrollLeft Math.max(0, startLeft - wrapper_width / 2)
+          startLeft = parseInt $container.css('margin-left')
+          setMarginLeft Math.min(0, startLeft + wrapper_width / 2)
         .on 'click', '.next', (event)->
           event.stopPropagation()
-          startLeft = $wrapper.scrollLeft()
-          setScrollLeft Math.min(startLeft + wrapper_width / 2, total_width - wrapper_width)
+          startLeft = parseInt $container.css('margin-left')
+          setMarginLeft Math.max(startLeft - wrapper_width / 2, wrapper_width - total_width)
 
   IndexCtrl.init()
