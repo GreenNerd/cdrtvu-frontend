@@ -5,6 +5,7 @@ $(function() {
       var map, marker;
       L.mapbox.accessToken = 'pk.eyJ1IjoiY2RydHZ1IiwiYSI6IjBkNTI1NGJjZjMzN2IwYmRkZWQ0ZDRhNmViMThmN2FjIn0.7RyvkJ19fLl3fIDwWuaAEw';
       map = L.mapbox.map('map', 'cdrtvu.b5429f9b');
+      map.scrollWheelZoom.disable();
       map.setView([30.664215, 104.057768], 17);
       marker = L.mapbox.featureLayer({
         type: 'FeatureCollection',
