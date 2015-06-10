@@ -1,6 +1,8 @@
 .footer-panel {
   background-color: #272727;
   color: white;
+  position: relative;
+  z-index: 1000;
 
   .panel-content {
     padding: 1rem 3rem;
@@ -30,7 +32,6 @@
     width: $link-icon-size;
     height: $link-icon-size;
     position: relative;
-    z-index: 1000;
 
     &.extra-qq {
       background-color: #0081FF;
@@ -74,10 +75,16 @@
       }
     }
 
-    &:hover, &:active, &:focus {
+    &:hover, &.active {
+      z-index: 10;
+
       .qr-container {
         display: block;
       }
+    }
+
+    &.active {
+      z-index: 9;
     }
   }
 

@@ -982,6 +982,8 @@ header {
 .footer-panel {
   background-color: #272727;
   color: white;
+  position: relative;
+  z-index: 1000;
 }
 
 .footer-panel .panel-content {
@@ -1011,7 +1013,6 @@ header {
   width: 2.6rem;
   height: 2.6rem;
   position: relative;
-  z-index: 1000;
 }
 
 .footer-panel .extra-link-item.extra-qq {
@@ -1054,8 +1055,16 @@ header {
   left: 4rem;
 }
 
-.footer-panel .extra-link-item:hover .qr-container, .footer-panel .extra-link-item:active .qr-container, .footer-panel .extra-link-item:focus .qr-container {
+.footer-panel .extra-link-item:hover, .footer-panel .extra-link-item.active {
+  z-index: 10;
+}
+
+.footer-panel .extra-link-item:hover .qr-container, .footer-panel .extra-link-item.active .qr-container {
   display: block;
+}
+
+.footer-panel .extra-link-item.active {
+  z-index: 9;
 }
 
 .footer-panel .friend-links {

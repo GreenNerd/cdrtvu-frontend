@@ -1,12 +1,15 @@
 $ ->
   IndexCtrl =
     mobileDevice: ///mobile///.test navigator.appVersion.toLowerCase()
+    touchSupport: window.ontouchstart is null
     init: ->
+      @clickevent = if @touchSupport then 'touchend' else 'click'
       @pcScroll()
       @mobileBars()
       @enableSubMenu()
       @enableCategorySwitch()
       @enableImgsWall() if $('#imgs_wall_container').length
+      @enableFooterQrcode()
 
     pcScroll: ->
       $(document).scroll (event)->
@@ -17,11 +20,11 @@ $ ->
           $('#header_nav').removeClass('expanded')
 
     mobileBars: ->
-      $('#menu_icon').on 'click', (event)->
+      $('#menu_icon').on @clickevent, (event)->
         $('#header_nav_mobile').toggleClass('expanded')
 
     enableSubMenu: ->
-      $('#header_nav_mobile').on 'click', '.has-sub-nav', (event)=>
+      $('#header_nav_mobile').on @clickevent, '.has-sub-nav', (event)=>
         event.stopPropagation()
         event.preventDefault()
         $target = $(event.target).closest('a')
@@ -70,10 +73,10 @@ $ ->
       setControlStatus(startIndex)
 
       $control
-        .on 'click', '.prev', (event)->
+        .on @clickevent, '.prev', (event)->
           return true if $(event.target).hasClass('disabled')
           setCategoryIndex(getCurrentIndex() - 1)
-        .on 'click', '.next', (event)->
+        .on @clickevent, '.next', (event)->
           return true if $(event.target).hasClass('disabled')
           setCategoryIndex(getCurrentIndex() + 1)
 

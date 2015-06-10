@@ -2,14 +2,17 @@ $(function() {
   var IndexCtrl;
   IndexCtrl = {
     mobileDevice: /mobile/.test(navigator.appVersion.toLowerCase()),
+    touchSupport: window.ontouchstart === null,
     init: function() {
+      this.clickevent = this.touchSupport ? 'touchend' : 'click';
       this.pcScroll();
       this.mobileBars();
       this.enableSubMenu();
       this.enableCategorySwitch();
       if ($('#imgs_wall_container').length) {
-        return this.enableImgsWall();
+        this.enableImgsWall();
       }
+      return this.enableFooterQrcode();
     },
     pcScroll: function() {
       return $(document).scroll(function(event) {
@@ -23,12 +26,12 @@ $(function() {
       });
     },
     mobileBars: function() {
-      return $('#menu_icon').on('click', function(event) {
+      return $('#menu_icon').on(this.clickevent, function(event) {
         return $('#header_nav_mobile').toggleClass('expanded');
       });
     },
     enableSubMenu: function() {
-      return $('#header_nav_mobile').on('click', '.has-sub-nav', (function(_this) {
+      return $('#header_nav_mobile').on(this.clickevent, '.has-sub-nav', (function(_this) {
         return function(event) {
           var $relate, $target, isActived;
           event.stopPropagation();
@@ -81,12 +84,12 @@ $(function() {
       startIndex = getCurrentIndex();
       count = $container.children('.category-item').length;
       setControlStatus(startIndex);
-      return $control.on('click', '.prev', function(event) {
+      return $control.on(this.clickevent, '.prev', function(event) {
         if ($(event.target).hasClass('disabled')) {
           return true;
         }
         return setCategoryIndex(getCurrentIndex() - 1);
-      }).on('click', '.next', function(event) {
+      }).on(this.clickevent, '.next', function(event) {
         if ($(event.target).hasClass('disabled')) {
           return true;
         }

@@ -1,13 +1,15 @@
 $(function() {
   var FAQCtrl;
   FAQCtrl = {
+    touchSupport: window.ontouchstart === null,
     init: function() {
+      this.clickevent = this.touchSupport ? 'touchend' : 'click';
       if ($('#questions_container').length) {
         return this.bindExpand();
       }
     },
     bindExpand: function() {
-      return $('#questions_container').on('click', '.faq-expand-toggler', function(event) {
+      return $('#questions_container').on(this.clickevent, '.faq-expand-toggler', function(event) {
         var $target, $toggler, start_text;
         $toggler = $(event.target).closest('.faq-expand-toggler');
         $target = $toggler.closest('.faq-section');
