@@ -106,13 +106,31 @@ $ ->
       setMarginLeft(0)
 
       $('#imgs_wall_container')
-        .on 'click', '.prev', (event)->
+        .on @clickevent, '.prev', (event)->
           event.stopPropagation()
           startLeft = parseInt $container.css('margin-left')
           setMarginLeft Math.min(0, startLeft + wrapper_width / 2)
-        .on 'click', '.next', (event)->
+        .on @clickevent, '.next', (event)->
           event.stopPropagation()
           startLeft = parseInt $container.css('margin-left')
           setMarginLeft Math.max(startLeft - wrapper_width / 2, wrapper_width - total_width)
+
+    enableFooterQrcode: ->
+      return true unless @mobileDevice
+      active_link = undefined
+      $(document)
+        .on @clickevent, '.extra-link-item', (event)->
+          event.stopPropagation()
+          if active_link
+            active_link.removeClass('active')
+          $target = $(event.target).closest('.extra-link-item')
+          $target.toggleClass('active')
+          active_link = $target
+        .on @clickevent, '.qr-container', (event)->
+          event.stopPropagation()
+        .on @clickevent, (event)->
+          if active_link
+            active_link.removeClass('active')
+
 
   IndexCtrl.init()
