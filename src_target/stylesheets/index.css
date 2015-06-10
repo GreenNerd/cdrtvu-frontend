@@ -1367,12 +1367,9 @@ header {
   color: #444444;
 }
 
-.page-container .page-attachments span {
-  float: left;
-}
-
 .page-container .page-attachments .attachments-list {
-  margin-left: 3rem;
+  margin-top: .5rem;
+  margin-left: 1rem;
 }
 
 .page-container .page-attachments .attachments-list a {
