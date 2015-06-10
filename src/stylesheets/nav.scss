@@ -80,6 +80,12 @@
     }
   }
 
+  .nav-logo {
+    img {
+      width: 100%;
+    }
+  }
+
   .sub-nav-list {
     max-height: 0;
     overflow: hidden;
@@ -264,6 +270,15 @@
   #header_nav_mobile {
     .service-links {
       display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-pc) {
+  .nav {
+    .nav-logo {
+      width: 16rem;
+      margin-top: .5rem;
     }
   }
 }
