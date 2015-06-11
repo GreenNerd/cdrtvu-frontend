@@ -580,10 +580,6 @@ header {
   color: #0081FF;
 }
 
-#header_nav_mobile .contacts .extra-link-item .fa-weibo {
-  color: #F73B3B;
-}
-
 #header_nav_mobile.expanded {
   background-color: white;
   color: #333333;
@@ -1021,11 +1017,6 @@ header {
 
 .footer-panel .extra-link-item.extra-weixin {
   background-color: #16C045;
-}
-
-.footer-panel .extra-link-item.extra-weibo {
-  background-color: #F73B3B;
-  margin-right: 0;
 }
 
 .footer-panel .extra-link-item .qr-container {
