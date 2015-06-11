@@ -4,23 +4,25 @@ $ ->
     touchSupport: window.ontouchstart is null
     init: ->
       @clickevent = if @touchSupport then 'touchend' else 'click'
-      @pcScroll()
+      @onScroll()
       @mobileBars()
       @enableSubMenu()
       @enableCategorySwitch()
       @enableImgsWall() if $('#imgs_wall_container').length
       @enableFooterQrcode()
 
-    pcScroll: ->
+    onScroll: ->
       $(document).scroll (event)->
         top = $(document).scrollTop()
         if top < 30
           $('#header_nav').addClass('expanded')
+          $('#header_nav_mobile').removeClass('floating')
         else
           $('#header_nav').removeClass('expanded')
+          $('#header_nav_mobile').addClass('floating')
 
     mobileBars: ->
-      $('#menu_icon').on @clickevent, (event)->
+      $(document).on @clickevent, '#menu_icon', (event)->
         $('#header_nav_mobile').toggleClass('expanded')
 
     enableSubMenu: ->

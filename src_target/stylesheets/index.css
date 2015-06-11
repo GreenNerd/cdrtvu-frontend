@@ -258,9 +258,6 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
-  header {
-    position: absolute;
-  }
   .map-panel {
     height: 80%;
   }
@@ -472,6 +469,7 @@ header {
 #header_nav_mobile #menu_icon {
   padding: 0.4rem 0.6rem;
   margin: 0.7rem 0.4rem 0.2rem 0.4rem;
+  border-radius: 2px;
   display: inline-block;
   font-size: 1.2rem;
   color: white;
@@ -479,6 +477,11 @@ header {
   z-index: 11;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #header_nav_mobile .menu-details {
@@ -581,7 +584,7 @@ header {
 }
 
 #header_nav_mobile.expanded {
-  background-color: white;
+  background-color: white !important;
   color: #333333;
   box-shadow: 0 0 4px 0 #666666;
 }
@@ -605,6 +608,18 @@ header {
 
 #header_nav_mobile.expanded .header-title {
   color: #333333;
+}
+
+#header_nav_mobile.floating {
+  background-color: transparent;
+}
+
+.index-header #header_nav_mobile.floating {
+  background-color: rgba(92, 172, 75, 0.9);
+}
+
+.index-header #header_nav_mobile.floating #menu_icon {
+  background-color: transparent;
 }
 
 .index-header #header_nav_mobile .service-links {

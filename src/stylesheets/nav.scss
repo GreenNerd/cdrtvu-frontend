@@ -133,6 +133,7 @@
   #menu_icon {
     padding: .4rem .6rem;
     margin: .7rem .4rem .2rem .4rem;
+    border-radius: 2px;
     display: inline-block;
     font-size: 1.2rem;
     color: white;
@@ -140,6 +141,7 @@
     z-index: 11;
     cursor: pointer;
     background-color: rgba(0, 0, 0, .8);
+    @include transition;
   }
 
   .menu-details {
@@ -235,7 +237,7 @@
   }
 
   &.expanded {
-    background-color: white;
+    background-color: white!important;
     color: #333333;
     box-shadow: 0 0 4px 0 #666666;
 
@@ -260,10 +262,22 @@
       color: #333333;
     }
   }
+
+  &.floating {
+    background-color: transparent;
+  }
 }
 
 .index-header {
   #header_nav_mobile {
+    &.floating {
+      background-color: $nav-bgc;
+
+      #menu_icon {
+        background-color: transparent;
+      }
+    }
+
     .service-links {
       display: block;
     }

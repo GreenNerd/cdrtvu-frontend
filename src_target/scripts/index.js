@@ -5,7 +5,7 @@ $(function() {
     touchSupport: window.ontouchstart === null,
     init: function() {
       this.clickevent = this.touchSupport ? 'touchend' : 'click';
-      this.pcScroll();
+      this.onScroll();
       this.mobileBars();
       this.enableSubMenu();
       this.enableCategorySwitch();
@@ -14,19 +14,21 @@ $(function() {
       }
       return this.enableFooterQrcode();
     },
-    pcScroll: function() {
+    onScroll: function() {
       return $(document).scroll(function(event) {
         var top;
         top = $(document).scrollTop();
         if (top < 30) {
-          return $('#header_nav').addClass('expanded');
+          $('#header_nav').addClass('expanded');
+          return $('#header_nav_mobile').removeClass('floating');
         } else {
-          return $('#header_nav').removeClass('expanded');
+          $('#header_nav').removeClass('expanded');
+          return $('#header_nav_mobile').addClass('floating');
         }
       });
     },
     mobileBars: function() {
-      return $('#menu_icon').on(this.clickevent, function(event) {
+      return $(document).on(this.clickevent, '#menu_icon', function(event) {
         return $('#header_nav_mobile').toggleClass('expanded');
       });
     },
