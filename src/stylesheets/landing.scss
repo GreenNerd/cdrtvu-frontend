@@ -53,7 +53,7 @@
   .next-anchor {
     position: absolute;
     left: 0;
-    bottom: 2.5rem;
+    bottom: 0;
     right: 0;
     text-align: center;
 
@@ -61,6 +61,7 @@
       color: white;
       font-size: 3rem;
       padding: 0 1rem;
+      line-height: 4.5rem;
     }
   }
 }
@@ -77,6 +78,12 @@
       .btn-wrapper {
         margin-top: 6rem;
         margin-bottom: 0;
+      }
+    }
+
+    .next-anchor {
+      a {
+        line-height: 3.6rem;
       }
     }
   }

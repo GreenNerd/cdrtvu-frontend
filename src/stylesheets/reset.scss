@@ -9,6 +9,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  padding-bottom: 0!important;
+}
+
 html {
   font-size: 16px;
   font-family: arial, 'Microsoft Yahei', '微软雅黑', '宋体', \5b8b\4f53, Tahoma, Arial, Helvetica, STHeiti;
@@ -38,4 +42,8 @@ em {
 
 img {
   display: inherit;
+}
+
+.baiduServiceBottomBar {
+  display: none!important;
 }
