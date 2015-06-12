@@ -715,6 +715,20 @@ header {
   height: 100%;
 }
 
+.landing-description .next-anchor {
+  position: absolute;
+  left: 0;
+  bottom: 2.5rem;
+  right: 0;
+  text-align: center;
+}
+
+.landing-description .next-anchor a {
+  color: white;
+  font-size: 3rem;
+  padding: 0 1rem;
+}
+
 @media only screen and (max-width: 768px) {
   .landing-description .description-wrapper {
     max-width: 100%;
