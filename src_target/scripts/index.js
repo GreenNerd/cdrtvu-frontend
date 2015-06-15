@@ -12,7 +12,8 @@ $(function() {
       if ($('#imgs_wall_container').length) {
         this.enableImgsWall();
       }
-      return this.enableFooterQrcode();
+      this.enableFooterQrcode();
+      return this.enableLandingAnchor();
     },
     onScroll: function() {
       return $(document).scroll(function(event) {
@@ -157,6 +158,13 @@ $(function() {
         if (active_link) {
           return active_link.removeClass('active');
         }
+      });
+    },
+    enableLandingAnchor: function() {
+      return $('#second_panel').on(this.clickevent, 'a', function(event) {
+        return $(document.body).animate({
+          scrollTop: $('#second_panel').offset().top
+        }, 400);
       });
     }
   };

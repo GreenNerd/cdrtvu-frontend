@@ -10,6 +10,7 @@ $ ->
       @enableCategorySwitch()
       @enableImgsWall() if $('#imgs_wall_container').length
       @enableFooterQrcode()
+      @enableLandingAnchor()
 
     onScroll: ->
       $(document).scroll (event)->
@@ -134,5 +135,10 @@ $ ->
           if active_link
             active_link.removeClass('active')
 
+    enableLandingAnchor: ->
+      $('#second_panel').on @clickevent, 'a', (event)->
+        $(document.body).animate({
+          scrollTop: $('#second_panel').offset().top
+        }, 400)
 
   IndexCtrl.init()
