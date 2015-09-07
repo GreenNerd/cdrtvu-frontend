@@ -1,7 +1,7 @@
 .landing-description {
   color: white;
   height: 100%;
-  background-image: url(banner.png);
+  background-image: url(http://web-server.qiniudn.com/cdrtvu-banner.jpg);
 
   @include centered-block;
   @include center-bg;
@@ -74,6 +74,7 @@
       margin-top: 0;
       width: 100%;
       padding: 0 1rem;
+      background-color: rgba(0, 0, 0, 0.2);
 
       .btn-wrapper {
         margin-top: 6rem;
