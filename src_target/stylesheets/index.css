@@ -277,6 +277,32 @@ header {
     text-align: right;
     vertical-align: middle;
     padding-top: .7rem; }
+  .nav .sub-nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 1rem;
+    background-color: #6ab75a; }
+    .nav .sub-nav-list .sub-nav-item {
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      color: #c6f8b7;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-size: .9rem;
+      max-height: 0;
+      padding: 0;
+      overflow: hidden; }
+      .nav .sub-nav-list .sub-nav-item:hover {
+        color: white; }
+    .nav .sub-nav-list .divider {
+      border-top: 1px solid #c6f8b7;
+      display: none; }
   .nav .nav-item {
     padding: .7rem 1rem;
     color: #c6f8b7;
@@ -292,37 +318,15 @@ header {
     transition: all .3s ease-in-out; }
     .nav .nav-item:hover, .nav .nav-item.active, .nav .nav-item:active {
       color: white; }
-      .nav .nav-item:hover .sub-nav-list, .nav .nav-item.active .sub-nav-list, .nav .nav-item:active .sub-nav-list {
-        max-height: 16rem; }
+      .nav .nav-item:hover .sub-nav-list .sub-nav-item, .nav .nav-item.active .sub-nav-list .sub-nav-item, .nav .nav-item:active .sub-nav-list .sub-nav-item {
+        max-height: 2.5rem;
+        padding: 0.8rem 0; }
+      .nav .nav-item:hover .sub-nav-list .divider, .nav .nav-item.active .sub-nav-list .divider, .nav .nav-item:active .sub-nav-list .divider {
+        display: block; }
     .nav .nav-item:last-child {
       margin-right: -1rem; }
   .nav .nav-logo img {
     width: 100%; }
-  .nav .sub-nav-list {
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 0 1rem;
-    background-color: #6ab75a; }
-    .nav .sub-nav-list .sub-nav-item {
-      color: #c6f8b7;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      padding: .8rem 0;
-      font-size: .9rem; }
-      .nav .sub-nav-list .sub-nav-item:hover {
-        color: white; }
-    .nav .sub-nav-list .divider {
-      border-top: 1px solid #c6f8b7; }
 
 #header_nav_mobile {
   -webkit-transition: all .3s ease-in-out;

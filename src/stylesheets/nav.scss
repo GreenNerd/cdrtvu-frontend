@@ -57,6 +57,36 @@
     padding-top: .7rem;
   }
 
+  .sub-nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 1rem;
+    background-color: $link-color;
+
+    .sub-nav-item {
+      @include transition;
+      color: #c6f8b7;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-size: .9rem;
+      max-height: 0;
+      padding: 0;
+      overflow: hidden;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .divider {
+      border-top: 1px solid #c6f8b7;
+      display: none;
+    }
+  }
+
   .nav-item {
     padding: .7rem 1rem;
     color: #c6f8b7;
@@ -71,7 +101,14 @@
       color: white;
 
       .sub-nav-list {
-        max-height: 16rem;
+        .sub-nav-item {
+          max-height: 2.5rem;
+          padding: 0.8rem 0;
+        }
+
+        .divider {
+          display: block;
+        }
       }
     }
 
@@ -83,35 +120,6 @@
   .nav-logo {
     img {
       width: 100%;
-    }
-  }
-
-  .sub-nav-list {
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    @include transition;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 0 1rem;
-    background-color: $link-color;
-
-    .sub-nav-item {
-      color: #c6f8b7;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      padding: .8rem 0;
-      font-size: .9rem;
-
-      &:hover {
-        color: white;
-      }
-    }
-
-    .divider {
-      border-top: 1px solid #c6f8b7;
     }
   }
 }
