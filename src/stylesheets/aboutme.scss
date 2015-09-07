@@ -59,12 +59,16 @@
 
   .card-mobile-content {
     position: absolute;
-    bottom: .5rem;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     left: 0;
     color: white;
+    right: 0;
+    text-align: left;
+    padding: .5rem;
 
     span {
-      margin-left: .5rem;
+      margin-right: .5rem;
     }
   }
 }
