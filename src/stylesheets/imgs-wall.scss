@@ -30,6 +30,9 @@
       @include transition;
 
       &:hover {
+        -ms-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
         transform: scale(1.1);
       }
     }
@@ -94,6 +97,9 @@
 
     .image-item {
       img:hover {
+        -ms-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
         transform: none;
       }
     }
