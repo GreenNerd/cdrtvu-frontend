@@ -820,7 +820,10 @@ header {
   margin: .5rem;
   color: white;
   display: block;
-  position: relative; }
+  position: relative;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden; }
   .faq-category-item h3 {
     margin: 0;
     text-align: center;
@@ -885,6 +888,10 @@ header {
       cursor: pointer; }
     #questions_container .faq-section.expanded p {
       display: block; }
+
+@media only screen and (max-width: 768px) {
+  .faq-category-item p {
+    margin-top: 0; } }
 
 .pages-container {
   padding: 1rem; }

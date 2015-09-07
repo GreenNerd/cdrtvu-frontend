@@ -3,6 +3,9 @@
   color: white;
   display: block;
   position: relative;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden;
 
   h3 {
     margin: 0;
@@ -68,6 +71,14 @@
       p {
         display: block;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .faq-category-item {
+    p {
+      margin-top: 0;
     }
   }
 }
